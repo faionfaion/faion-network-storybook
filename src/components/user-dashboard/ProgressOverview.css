@@ -1,0 +1,104 @@
+/* ProgressOverview - User progress tracking display */
+
+.fn-progress-overview {
+  background: #FFFFFF;
+  border: 1px solid #E5E5E0;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+/* Header */
+.fn-progress-overview__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.fn-progress-overview__title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1C1C1E;
+  margin: 0;
+}
+
+.fn-progress-overview__overall {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #5D1F2D;
+}
+
+/* Items */
+.fn-progress-overview__items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fn-progress-overview__item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fn-progress-overview__item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fn-progress-overview__item-label {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1C1C1E;
+}
+
+.fn-progress-overview__item-label--link {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.fn-progress-overview__item-label--link:hover {
+  color: #5D1F2D;
+}
+
+.fn-progress-overview__item-count {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  color: #6B6B6B;
+}
+
+/* Progress bar */
+.fn-progress-overview__bar {
+  height: 8px;
+  background: #E5E5E0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.fn-progress-overview__bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #5D1F2D 0%, #7A2B3D 100%);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .fn-progress-overview {
+    padding: 20px;
+  }
+
+  .fn-progress-overview__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .fn-progress-overview__title {
+    font-size: 16px;
+  }
+}

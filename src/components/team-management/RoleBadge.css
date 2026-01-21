@@ -1,0 +1,25 @@
+/* RoleBadge - Team member role badge */
+
+.fn-role-badge {
+  display: inline-block;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.fn-role-badge--owner {
+  background: #FAE8EB;
+  color: #5D1F2D;
+}
+
+.fn-role-badge--admin {
+  background: #DBEAFE;
+  color: #2563EB;
+}
+
+.fn-role-badge--member {
+  background: #F3F4F6;
+  color: #4B5563;
+}

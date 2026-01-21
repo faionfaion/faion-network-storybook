@@ -1,0 +1,112 @@
+/* MemberActionsDropdown - Actions menu for team members */
+
+.fn-member-actions {
+  position: relative;
+  display: inline-block;
+}
+
+.fn-member-actions--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Trigger */
+.fn-member-actions__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #4A4A4A;
+  transition: all 0.2s ease;
+}
+
+.fn-member-actions__trigger:hover {
+  background: #FAF9F6;
+  border-color: #E5E5E0;
+}
+
+.fn-member-actions__trigger:focus-visible {
+  outline: 2px solid #5D1F2D;
+  outline-offset: 2px;
+}
+
+/* Menu */
+.fn-member-actions__menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 4px;
+  min-width: 180px;
+  background: #FFFFFF;
+  border: 1px solid #E5E5E0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  overflow: hidden;
+}
+
+/* Section */
+.fn-member-actions__section {
+  padding: 8px 0;
+}
+
+.fn-member-actions__section-label {
+  display: block;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6B6B6B;
+  padding: 4px 12px 8px;
+}
+
+/* Divider */
+.fn-member-actions__divider {
+  height: 1px;
+  background: #E5E5E0;
+  margin: 0;
+}
+
+/* Item */
+.fn-member-actions__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  color: #1C1C1E;
+  text-align: left;
+  transition: background 0.2s ease;
+}
+
+.fn-member-actions__item:hover {
+  background: #FAF9F6;
+}
+
+.fn-member-actions__item--active {
+  font-weight: 500;
+}
+
+.fn-member-actions__item--danger {
+  color: #DC2626;
+}
+
+.fn-member-actions__item--danger:hover {
+  background: #FEF2F2;
+}
+
+.fn-member-actions__item:focus-visible {
+  outline: 2px solid #5D1F2D;
+  outline-offset: -2px;
+}

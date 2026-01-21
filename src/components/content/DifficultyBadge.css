@@ -1,0 +1,95 @@
+/* DifficultyBadge - Content difficulty level indicator */
+
+.fn-difficulty-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* Sizes */
+.fn-difficulty-badge--small {
+  padding: 2px 6px;
+  font-size: 10px;
+  gap: 3px;
+}
+
+.fn-difficulty-badge--large {
+  padding: 6px 12px;
+  font-size: 14px;
+  gap: 6px;
+}
+
+/* Levels */
+.fn-difficulty-badge--beginner {
+  background: #E8F5E9;
+  color: #2E7D32;
+}
+
+.fn-difficulty-badge--intermediate {
+  background: #FFF3E0;
+  color: #E65100;
+}
+
+.fn-difficulty-badge--advanced {
+  background: #FFEBEE;
+  color: #C62828;
+}
+
+/* Icon */
+.fn-difficulty-badge__icon {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+.fn-difficulty-badge--small .fn-difficulty-badge__icon {
+  width: 10px;
+  height: 10px;
+}
+
+.fn-difficulty-badge--large .fn-difficulty-badge__icon {
+  width: 14px;
+  height: 14px;
+}
+
+.fn-difficulty-badge__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Dot indicator variant */
+.fn-difficulty-badge--dot {
+  gap: 6px;
+}
+
+.fn-difficulty-badge__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.fn-difficulty-badge--beginner .fn-difficulty-badge__dot {
+  background: #2E7D32;
+}
+
+.fn-difficulty-badge--intermediate .fn-difficulty-badge__dot {
+  background: #E65100;
+}
+
+.fn-difficulty-badge--advanced .fn-difficulty-badge__dot {
+  background: #C62828;
+}
+
+/* Outline variant */
+.fn-difficulty-badge--outline {
+  background: transparent;
+  border: 1px solid currentColor;
+}

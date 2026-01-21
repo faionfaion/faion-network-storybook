@@ -1,0 +1,77 @@
+/* AudioButton - Play/pause button for audio */
+
+.fn-audio-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Sizes */
+.fn-audio-button--sm {
+  width: 32px;
+  height: 32px;
+}
+
+.fn-audio-button--sm svg {
+  width: 14px;
+  height: 14px;
+}
+
+.fn-audio-button--md {
+  width: 40px;
+  height: 40px;
+}
+
+.fn-audio-button--md svg {
+  width: 18px;
+  height: 18px;
+}
+
+.fn-audio-button--lg {
+  width: 56px;
+  height: 56px;
+}
+
+.fn-audio-button--lg svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Variants */
+.fn-audio-button--primary {
+  background: #5D1F2D;
+  color: #FFFFFF;
+}
+
+.fn-audio-button--primary:hover {
+  background: #7A2B3D;
+}
+
+.fn-audio-button--secondary {
+  background: #FFFFFF;
+  color: #5D1F2D;
+  border: 2px solid #5D1F2D;
+}
+
+.fn-audio-button--secondary:hover {
+  background: #FAF9F6;
+}
+
+.fn-audio-button--ghost {
+  background: transparent;
+  color: #5D1F2D;
+}
+
+.fn-audio-button--ghost:hover {
+  background: #FAF9F6;
+}
+
+/* Focus */
+.fn-audio-button:focus-visible {
+  outline: 2px solid #5D1F2D;
+  outline-offset: 2px;
+}

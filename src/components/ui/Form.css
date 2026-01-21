@@ -1,0 +1,208 @@
+/**
+ * Form & Label Component Styles
+ * Faion Network Design System - Digital Journal Theme
+ */
+
+/* ========== LABEL ========== */
+
+.fn-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-sm, 0.875rem);
+  font-weight: 500;
+  line-height: 1;
+  color: var(--dj-soft-charcoal, #1C1C1E);
+  user-select: none;
+}
+
+.fn-label--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Required indicator */
+.fn-label--required::after {
+  content: '*';
+  color: var(--dj-danger, #EF4444);
+  margin-left: 2px;
+}
+
+/* Label with error state */
+.fn-label--error {
+  color: var(--dj-danger, #EF4444);
+}
+
+/* ========== FORM ITEM ========== */
+
+.fn-form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+/* Horizontal form item */
+.fn-form-item--horizontal {
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.fn-form-item--horizontal .fn-label {
+  min-width: 120px;
+  flex-shrink: 0;
+}
+
+/* ========== FORM DESCRIPTION ========== */
+
+.fn-form-description {
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-xs, 0.75rem);
+  line-height: var(--leading-normal, 1.5);
+  color: var(--dj-graphite, #4A4A4A);
+  margin: 0;
+}
+
+/* ========== FORM MESSAGE (Error) ========== */
+
+.fn-form-message {
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-xs, 0.75rem);
+  line-height: var(--leading-normal, 1.5);
+  color: var(--dj-danger, #EF4444);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.fn-form-message--success {
+  color: var(--dj-success, #22C55E);
+}
+
+.fn-form-message--warning {
+  color: var(--dj-warning, #F59E0B);
+}
+
+/* ========== FORM GROUP ========== */
+
+.fn-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Compact spacing */
+.fn-form-group--compact {
+  gap: 16px;
+}
+
+/* Spacious spacing */
+.fn-form-group--spacious {
+  gap: 24px;
+}
+
+/* ========== FORM SECTION ========== */
+
+.fn-form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--dj-taupe-grey, #E5E5E0);
+}
+
+.fn-form-section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.fn-form-section__title {
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: var(--text-lg, 1.125rem);
+  font-weight: 400;
+  color: var(--dj-soft-charcoal, #1C1C1E);
+  margin: 0;
+}
+
+.fn-form-section__description {
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--dj-graphite, #4A4A4A);
+  margin: 0;
+}
+
+/* ========== FORM ACTIONS ========== */
+
+.fn-form-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 24px;
+  border-top: 1px solid var(--dj-taupe-grey, #E5E5E0);
+}
+
+.fn-form-actions--end {
+  justify-content: flex-end;
+}
+
+.fn-form-actions--center {
+  justify-content: center;
+}
+
+.fn-form-actions--between {
+  justify-content: space-between;
+}
+
+/* ========== INLINE FORM ========== */
+
+.fn-form-inline {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.fn-form-inline .fn-form-item {
+  flex: 1;
+}
+
+/* ========== FORM GRID ========== */
+
+.fn-form-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.fn-form-grid--2col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.fn-form-grid--3col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 768px) {
+  .fn-form-grid--2col,
+  .fn-form-grid--3col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========== FIELDSET ========== */
+
+.fn-fieldset {
+  border: 1px solid var(--dj-taupe-grey, #E5E5E0);
+  border-radius: var(--radius-md, 6px);
+  padding: 20px;
+  margin: 0;
+}
+
+.fn-fieldset__legend {
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-sm, 0.875rem);
+  font-weight: 600;
+  color: var(--dj-soft-charcoal, #1C1C1E);
+  padding: 0 8px;
+}

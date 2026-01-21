@@ -1,0 +1,171 @@
+/* AlphabetNav - A-Z navigation for glossary and alphabetical content */
+
+.fn-alphabet-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+/* Letters container */
+.fn-alphabet-nav__letters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+/* Button base */
+.fn-alphabet-nav__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 32px;
+  padding: 0 6px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #4A4A4A;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.fn-alphabet-nav__button:hover:not(:disabled):not(.fn-alphabet-nav__button--active) {
+  background: #FAF9F6;
+  border-color: #E5E5E0;
+}
+
+/* Active state */
+.fn-alphabet-nav__button--active {
+  background: #5D1F2D;
+  border-color: #5D1F2D;
+  color: #FFFFFF;
+}
+
+/* Disabled state */
+.fn-alphabet-nav__button--disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.fn-alphabet-nav__button:disabled {
+  cursor: not-allowed;
+}
+
+/* All button */
+.fn-alphabet-nav__button--all {
+  min-width: 48px;
+  padding: 0 12px;
+  background: #FAF9F6;
+  border-color: #E5E5E0;
+  margin-right: 8px;
+}
+
+.fn-alphabet-nav__button--all.fn-alphabet-nav__button--active {
+  background: #5D1F2D;
+  border-color: #5D1F2D;
+  color: #FFFFFF;
+}
+
+/* Other button (#) */
+.fn-alphabet-nav__button--other {
+  margin-left: 8px;
+  background: #FAF9F6;
+  border-color: #E5E5E0;
+}
+
+/* Size variants */
+.fn-alphabet-nav--sm .fn-alphabet-nav__button {
+  min-width: 28px;
+  height: 28px;
+  font-size: 12px;
+}
+
+.fn-alphabet-nav--sm .fn-alphabet-nav__letters {
+  gap: 2px;
+}
+
+.fn-alphabet-nav--lg .fn-alphabet-nav__button {
+  min-width: 40px;
+  height: 40px;
+  font-size: 15px;
+}
+
+.fn-alphabet-nav--lg .fn-alphabet-nav__letters {
+  gap: 6px;
+}
+
+/* Compact variant */
+.fn-alphabet-nav--compact {
+  gap: 4px;
+}
+
+.fn-alphabet-nav--compact .fn-alphabet-nav__button {
+  min-width: 24px;
+  height: 24px;
+  padding: 0;
+  font-size: 11px;
+}
+
+.fn-alphabet-nav--compact .fn-alphabet-nav__button--all {
+  min-width: 36px;
+  padding: 0 8px;
+  margin-right: 4px;
+}
+
+.fn-alphabet-nav--compact .fn-alphabet-nav__button--other {
+  margin-left: 4px;
+}
+
+.fn-alphabet-nav--compact .fn-alphabet-nav__letters {
+  gap: 2px;
+}
+
+/* Sticky variant */
+.fn-alphabet-nav--sticky {
+  position: sticky;
+  top: 0;
+  padding: 12px 0;
+  background: #FAF9F6;
+  border-bottom: 1px solid #E5E5E0;
+  z-index: 10;
+}
+
+/* Disabled state */
+.fn-alphabet-nav--disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .fn-alphabet-nav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .fn-alphabet-nav__letters {
+    justify-content: center;
+  }
+
+  .fn-alphabet-nav__button--all,
+  .fn-alphabet-nav__button--other {
+    margin: 0;
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .fn-alphabet-nav__button {
+    min-width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  .fn-alphabet-nav__letters {
+    gap: 2px;
+  }
+}

@@ -1,0 +1,198 @@
+/**
+ * Input & Textarea Component Styles
+ * Faion Network Design System - Digital Journal Theme
+ */
+
+/* ========== INPUT BASE ========== */
+
+.fn-input {
+  display: flex;
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--dj-taupe-grey, #E5E5E0);
+  border-radius: var(--radius-md, 6px);
+  background-color: var(--dj-pure-cream, #FFFFFF);
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-base, 1rem);
+  line-height: var(--leading-normal, 1.5);
+  color: var(--dj-soft-charcoal, #1C1C1E);
+  transition: all var(--duration-fast, 150ms) var(--ease-default);
+  outline: none;
+}
+
+.fn-input::placeholder {
+  color: var(--dj-graphite, #4A4A4A);
+  opacity: 0.7;
+}
+
+/* Focus State - Burgundy ring */
+.fn-input:focus {
+  border-color: var(--dj-deep-burgundy, #5D1F2D);
+  box-shadow: 0 0 0 3px rgba(93, 31, 45, 0.15);
+}
+
+/* Hover State */
+.fn-input:hover:not(:focus):not(:disabled):not(.fn-input--error) {
+  border-color: #CFCFC8;
+}
+
+/* Error State */
+.fn-input--error {
+  border-color: var(--dj-danger, #EF4444);
+}
+
+.fn-input--error:focus {
+  border-color: var(--dj-danger, #EF4444);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+}
+
+/* Disabled State */
+.fn-input:disabled {
+  background-color: var(--dj-taupe-grey, #E5E5E0);
+  color: var(--dj-graphite, #4A4A4A);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* ========== SIZE VARIANTS ========== */
+
+.fn-input--small {
+  padding: 8px 12px;
+  font-size: var(--text-sm, 0.875rem);
+}
+
+.fn-input--large {
+  padding: 14px 18px;
+  font-size: var(--text-lg, 1.125rem);
+}
+
+/* ========== TEXTAREA ========== */
+
+.fn-textarea {
+  display: flex;
+  width: 100%;
+  min-height: 120px;
+  padding: 12px 14px;
+  border: 1px solid var(--dj-taupe-grey, #E5E5E0);
+  border-radius: var(--radius-md, 6px);
+  background-color: var(--dj-pure-cream, #FFFFFF);
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-base, 1rem);
+  line-height: var(--leading-relaxed, 1.625);
+  color: var(--dj-soft-charcoal, #1C1C1E);
+  transition: all var(--duration-fast, 150ms) var(--ease-default);
+  outline: none;
+  resize: vertical;
+}
+
+.fn-textarea::placeholder {
+  color: var(--dj-graphite, #4A4A4A);
+  opacity: 0.7;
+}
+
+/* Focus State */
+.fn-textarea:focus {
+  border-color: var(--dj-deep-burgundy, #5D1F2D);
+  box-shadow: 0 0 0 3px rgba(93, 31, 45, 0.15);
+}
+
+/* Hover State */
+.fn-textarea:hover:not(:focus):not(:disabled):not(.fn-textarea--error) {
+  border-color: #CFCFC8;
+}
+
+/* Error State */
+.fn-textarea--error {
+  border-color: var(--dj-danger, #EF4444);
+}
+
+.fn-textarea--error:focus {
+  border-color: var(--dj-danger, #EF4444);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+}
+
+/* Disabled State */
+.fn-textarea:disabled {
+  background-color: var(--dj-taupe-grey, #E5E5E0);
+  color: var(--dj-graphite, #4A4A4A);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* No Resize */
+.fn-textarea--no-resize {
+  resize: none;
+}
+
+/* ========== INPUT WITH ICON ========== */
+
+.fn-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.fn-input-wrapper .fn-input {
+  width: 100%;
+}
+
+.fn-input-wrapper--icon-left .fn-input {
+  padding-left: 42px;
+}
+
+.fn-input-wrapper--icon-right .fn-input {
+  padding-right: 42px;
+}
+
+.fn-input-icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  color: var(--dj-graphite, #4A4A4A);
+  pointer-events: none;
+}
+
+.fn-input-icon--left {
+  left: 14px;
+}
+
+.fn-input-icon--right {
+  right: 14px;
+}
+
+/* ========== FORM FIELD ========== */
+
+.fn-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.fn-form-label {
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-sm, 0.875rem);
+  font-weight: 500;
+  color: var(--dj-soft-charcoal, #1C1C1E);
+}
+
+.fn-form-label--required::after {
+  content: ' *';
+  color: var(--dj-danger, #EF4444);
+}
+
+.fn-form-hint {
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-xs, 0.75rem);
+  color: var(--dj-graphite, #4A4A4A);
+}
+
+.fn-form-error {
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-xs, 0.75rem);
+  color: var(--dj-danger, #EF4444);
+}

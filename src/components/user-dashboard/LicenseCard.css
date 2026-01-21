@@ -1,0 +1,201 @@
+/* LicenseCard - MCP license information display */
+
+.fn-license-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E5E0;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+/* Header */
+.fn-license-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.fn-license-card__type-info {
+  flex: 1;
+}
+
+.fn-license-card__label {
+  display: block;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6B6B6B;
+  margin-bottom: 4px;
+}
+
+.fn-license-card__type {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1C1C1E;
+  margin: 0;
+}
+
+/* Status badge */
+.fn-license-card__status {
+  display: inline-block;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.fn-license-card__status--active {
+  background: #DCFCE7;
+  color: #166534;
+}
+
+.fn-license-card__status--expired {
+  background: #FEF3C7;
+  color: #92400E;
+}
+
+.fn-license-card__status--revoked {
+  background: #FEE2E2;
+  color: #991B1B;
+}
+
+/* Key section */
+.fn-license-card__key-section {
+  margin-bottom: 20px;
+}
+
+.fn-license-card__key-label {
+  display: block;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  color: #6B6B6B;
+  margin-bottom: 8px;
+}
+
+.fn-license-card__key-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #FAF9F6;
+  border: 1px solid #E5E5E0;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.fn-license-card__key {
+  flex: 1;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 13px;
+  color: #1C1C1E;
+  word-break: break-all;
+}
+
+.fn-license-card__key-action {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: #6B6B6B;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.fn-license-card__key-action:hover {
+  color: #1C1C1E;
+  background: #E5E5E0;
+}
+
+.fn-license-card__key-action:focus-visible {
+  outline: 2px solid #5D1F2D;
+  outline-offset: 2px;
+}
+
+/* Details */
+.fn-license-card__details {
+  display: flex;
+  gap: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #E5E5E0;
+}
+
+.fn-license-card__detail {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.fn-license-card__detail-label {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  color: #6B6B6B;
+}
+
+.fn-license-card__detail-value {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1C1C1E;
+}
+
+/* Actions */
+.fn-license-card__actions {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #E5E5E0;
+}
+
+.fn-license-card__button {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 20px;
+  background: transparent;
+  color: #5D1F2D;
+  border: 1px solid #5D1F2D;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.fn-license-card__button:hover {
+  background: #5D1F2D;
+  color: #FFFFFF;
+}
+
+.fn-license-card__button:focus-visible {
+  outline: 2px solid #5D1F2D;
+  outline-offset: 2px;
+}
+
+/* Status variants */
+.fn-license-card--expired,
+.fn-license-card--revoked {
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .fn-license-card {
+    padding: 20px;
+  }
+
+  .fn-license-card__type {
+    font-size: 18px;
+  }
+
+  .fn-license-card__key {
+    font-size: 12px;
+  }
+
+  .fn-license-card__details {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

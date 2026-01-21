@@ -1,0 +1,163 @@
+/* CodeExample - Syntax-highlighted code block for MDX */
+
+.fn-code-example {
+  margin: 24px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #1C1C1E;
+  border: 1px solid #2D2D2F;
+}
+
+/* Header */
+.fn-code-example__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: #252528;
+  border-bottom: 1px solid #2D2D2F;
+}
+
+.fn-code-example__info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fn-code-example__file-icon {
+  width: 16px;
+  height: 16px;
+  color: #9CA3AF;
+}
+
+.fn-code-example__file-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.fn-code-example__filename {
+  font-family: 'JetBrains Mono', Consolas, Monaco, monospace;
+  font-size: 13px;
+  color: #E5E5E0;
+}
+
+.fn-code-example__language {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #9CA3AF;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Copy button */
+.fn-code-example__copy {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid #3D3D40;
+  border-radius: 6px;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #9CA3AF;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.fn-code-example__copy:hover {
+  background: #3D3D40;
+  color: #E5E5E0;
+}
+
+.fn-code-example__copy--copied {
+  color: #22C55E;
+  border-color: #22C55E;
+}
+
+.fn-code-example__copy svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Content */
+.fn-code-example__content {
+  overflow-x: auto;
+}
+
+.fn-code-example__pre {
+  margin: 0;
+  padding: 16px 0;
+}
+
+.fn-code-example__code {
+  font-family: 'JetBrains Mono', Consolas, Monaco, monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #E5E5E0;
+}
+
+/* Line */
+.fn-code-example__line {
+  display: flex;
+  padding: 0 16px;
+  min-height: 21px;
+}
+
+.fn-code-example__line--highlighted {
+  background: rgba(93, 31, 45, 0.3);
+  border-left: 3px solid #5D1F2D;
+  padding-left: 13px;
+}
+
+/* Line number */
+.fn-code-example__line-number {
+  flex-shrink: 0;
+  width: 40px;
+  padding-right: 16px;
+  text-align: right;
+  color: #4A4A4A;
+  user-select: none;
+}
+
+/* Line content */
+.fn-code-example__line-content {
+  flex: 1;
+  white-space: pre;
+}
+
+/* Without line numbers */
+.fn-code-example:not(.fn-code-example--with-lines) .fn-code-example__line {
+  padding-left: 16px;
+}
+
+/* Caption */
+.fn-code-example__caption {
+  padding: 10px 16px;
+  background: #252528;
+  border-top: 1px solid #2D2D2F;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 12px;
+  color: #9CA3AF;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .fn-code-example {
+    margin: 16px -16px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .fn-code-example__code {
+    font-size: 12px;
+  }
+
+  .fn-code-example__copy span {
+    display: none;
+  }
+}

@@ -1,0 +1,122 @@
+/* PremiumLoadingSkeleton - Loading skeleton for premium content */
+
+.fn-premium-skeleton {
+  width: 100%;
+}
+
+/* Base skeleton element */
+.fn-premium-skeleton__item {
+  background: linear-gradient(90deg, #E5E5E0 25%, #F0F0EB 50%, #E5E5E0 75%);
+  background-size: 200% 100%;
+  animation: fn-skeleton-shimmer 1.5s ease-in-out infinite;
+  border-radius: 4px;
+}
+
+/* Line skeleton */
+.fn-premium-skeleton__line {
+  height: 16px;
+  margin-bottom: 12px;
+}
+
+.fn-premium-skeleton__line:last-child {
+  margin-bottom: 0;
+}
+
+.fn-premium-skeleton__line--short {
+  width: 60%;
+}
+
+.fn-premium-skeleton__line--medium {
+  width: 80%;
+}
+
+.fn-premium-skeleton__line--full {
+  width: 100%;
+}
+
+/* Title skeleton */
+.fn-premium-skeleton__title {
+  height: 32px;
+  width: 70%;
+  margin-bottom: 16px;
+}
+
+/* Paragraph skeleton */
+.fn-premium-skeleton__paragraph {
+  margin-bottom: 24px;
+}
+
+/* Image/Media skeleton */
+.fn-premium-skeleton__media {
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  margin-bottom: 24px;
+}
+
+.fn-premium-skeleton__media--square {
+  padding-top: 100%;
+}
+
+.fn-premium-skeleton__media--wide {
+  padding-top: 42.86%; /* 21:9 aspect ratio */
+}
+
+/* Card skeleton */
+.fn-premium-skeleton__card {
+  background: #FFFFFF;
+  border: 1px solid #E5E5E0;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+/* Article layout */
+.fn-premium-skeleton--article {
+  max-width: 720px;
+}
+
+/* Grid layout */
+.fn-premium-skeleton--grid {
+  display: grid;
+  gap: 24px;
+}
+
+.fn-premium-skeleton--grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.fn-premium-skeleton--grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Shimmer animation */
+@keyframes fn-skeleton-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .fn-premium-skeleton--grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .fn-premium-skeleton--grid-2,
+  .fn-premium-skeleton--grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .fn-premium-skeleton__title {
+    height: 24px;
+  }
+
+  .fn-premium-skeleton__line {
+    height: 14px;
+    margin-bottom: 10px;
+  }
+}

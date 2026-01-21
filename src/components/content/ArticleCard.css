@@ -1,0 +1,247 @@
+/* ArticleCard - Card component for article previews */
+
+.fn-article-card {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border: 1px solid #E5E5E0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.fn-article-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Image container */
+.fn-article-card__image {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  background: #E5E5E0;
+  overflow: hidden;
+}
+
+.fn-article-card__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.fn-article-card:hover .fn-article-card__image img {
+  transform: scale(1.02);
+}
+
+/* Image placeholder */
+.fn-article-card__image-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FAF9F6;
+}
+
+.fn-article-card__image-placeholder-icon {
+  width: 48px;
+  height: 48px;
+  color: #E5E5E0;
+}
+
+/* Category badge on image */
+.fn-article-card__category-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 4px;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #5D1F2D;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Premium badge */
+.fn-article-card__premium-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+/* Content */
+.fn-article-card__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+}
+
+/* Title */
+.fn-article-card__title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1C1C1E;
+  margin: 0 0 8px;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Excerpt */
+.fn-article-card__excerpt {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  color: #4A4A4A;
+  margin: 0 0 16px;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1;
+}
+
+/* Meta row */
+.fn-article-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 12px;
+  color: #4A4A4A;
+}
+
+.fn-article-card__meta-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.fn-article-card__meta-icon {
+  width: 14px;
+  height: 14px;
+  color: #4A4A4A;
+}
+
+.fn-article-card__meta-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Difficulty badge */
+.fn-article-card__difficulty {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.fn-article-card__difficulty--beginner {
+  background: #E8F5E9;
+  color: #2E7D32;
+}
+
+.fn-article-card__difficulty--intermediate {
+  background: #FFF3E0;
+  color: #E65100;
+}
+
+.fn-article-card__difficulty--advanced {
+  background: #FFEBEE;
+  color: #C62828;
+}
+
+/* Horizontal variant */
+.fn-article-card--horizontal {
+  flex-direction: row;
+}
+
+.fn-article-card--horizontal .fn-article-card__image {
+  width: 280px;
+  min-width: 280px;
+  padding-top: 0;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.fn-article-card--horizontal .fn-article-card__content {
+  padding: 24px;
+}
+
+/* Compact variant */
+.fn-article-card--compact .fn-article-card__image {
+  padding-top: 50%;
+}
+
+.fn-article-card--compact .fn-article-card__content {
+  padding: 16px;
+}
+
+.fn-article-card--compact .fn-article-card__title {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.fn-article-card--compact .fn-article-card__excerpt {
+  -webkit-line-clamp: 2;
+  margin-bottom: 12px;
+}
+
+/* Featured variant */
+.fn-article-card--featured {
+  border-color: #5D1F2D;
+}
+
+.fn-article-card--featured .fn-article-card__title {
+  font-size: 24px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .fn-article-card--horizontal {
+    flex-direction: column;
+  }
+
+  .fn-article-card--horizontal .fn-article-card__image {
+    width: 100%;
+    min-width: auto;
+    padding-top: 56.25%;
+  }
+}
+
+@media (max-width: 480px) {
+  .fn-article-card__content {
+    padding: 16px;
+  }
+
+  .fn-article-card__title {
+    font-size: 16px;
+  }
+
+  .fn-article-card__excerpt {
+    font-size: 13px;
+  }
+
+  .fn-article-card__meta {
+    gap: 12px;
+  }
+}

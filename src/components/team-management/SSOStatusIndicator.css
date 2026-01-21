@@ -1,0 +1,54 @@
+/* SSOStatusIndicator - SSO connection status display */
+
+.fn-sso-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: #FFFFFF;
+  border: 1px solid #E5E5E0;
+  border-radius: 8px;
+}
+
+/* Indicator icon */
+.fn-sso-status__indicator {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fn-sso-status--connected .fn-sso-status__indicator {
+  color: #16A34A;
+}
+
+.fn-sso-status--disconnected .fn-sso-status__indicator {
+  color: #9CA3AF;
+}
+
+/* Content */
+.fn-sso-status__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.fn-sso-status__label {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.fn-sso-status--connected .fn-sso-status__label {
+  color: #16A34A;
+}
+
+.fn-sso-status--disconnected .fn-sso-status__label {
+  color: #4A4A4A;
+}
+
+.fn-sso-status__provider {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 12px;
+  color: #6B6B6B;
+}

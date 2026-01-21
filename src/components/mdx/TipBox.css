@@ -1,0 +1,142 @@
+/* TipBox - MDX callout component with variants */
+
+.fn-tip-box {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 24px 0;
+  border-left: 4px solid;
+}
+
+/* Icon */
+.fn-tip-box__icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.fn-tip-box__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Content */
+.fn-tip-box__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.fn-tip-box__title {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 4px;
+  line-height: 1.4;
+}
+
+.fn-tip-box__text {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  color: inherit;
+  margin: 0;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Tip variant (blue) */
+.fn-tip-box--tip {
+  background: #E3F2FD;
+  border-color: #1976D2;
+  color: #0D47A1;
+}
+
+.fn-tip-box--tip .fn-tip-box__icon {
+  color: #1976D2;
+}
+
+/* Warning variant (amber) */
+.fn-tip-box--warning {
+  background: #FFF3E0;
+  border-color: #F57C00;
+  color: #E65100;
+}
+
+.fn-tip-box--warning .fn-tip-box__icon {
+  color: #F57C00;
+}
+
+/* Info variant (gray) */
+.fn-tip-box--info {
+  background: #F5F5F5;
+  border-color: #616161;
+  color: #424242;
+}
+
+.fn-tip-box--info .fn-tip-box__icon {
+  color: #616161;
+}
+
+/* Success variant (green) */
+.fn-tip-box--success {
+  background: #E8F5E9;
+  border-color: #43A047;
+  color: #2E7D32;
+}
+
+.fn-tip-box--success .fn-tip-box__icon {
+  color: #43A047;
+}
+
+/* Error variant (red) */
+.fn-tip-box--error {
+  background: #FFEBEE;
+  border-color: #E53935;
+  color: #C62828;
+}
+
+.fn-tip-box--error .fn-tip-box__icon {
+  color: #E53935;
+}
+
+/* Compact variant */
+.fn-tip-box--compact {
+  padding: 12px;
+  gap: 10px;
+}
+
+.fn-tip-box--compact .fn-tip-box__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.fn-tip-box--compact .fn-tip-box__title {
+  font-size: 13px;
+}
+
+.fn-tip-box--compact .fn-tip-box__text {
+  font-size: 13px;
+}
+
+/* No title variant */
+.fn-tip-box--no-title .fn-tip-box__text {
+  margin-top: 2px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .fn-tip-box {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .fn-tip-box__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .fn-tip-box__title,
+  .fn-tip-box__text {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,195 @@
+/* PaywallOverlay - Blur overlay for premium content */
+
+.fn-paywall-overlay {
+  position: relative;
+  width: 100%;
+}
+
+.fn-paywall-overlay__content {
+  position: relative;
+}
+
+/* Gradient blur mask that fades from visible to blurred */
+.fn-paywall-overlay__mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+
+  /* Gradient from transparent to solid background */
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 25%,
+    rgba(250, 249, 246, 0.5) 35%,
+    rgba(250, 249, 246, 0.8) 45%,
+    rgba(250, 249, 246, 0.95) 55%,
+    #FAF9F6 70%
+  );
+
+  /* Blur effect using backdrop-filter */
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 20%,
+    black 40%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 20%,
+    black 40%
+  );
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* CTA container - positioned over the blur */
+.fn-paywall-overlay__cta-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  padding: 48px 24px;
+
+  /* Animation */
+  animation: fn-paywall-fade-in 0.4s ease-out;
+}
+
+/* CTA Card */
+.fn-paywall-overlay__cta-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E5E0;
+  border-radius: 8px;
+  padding: 32px;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+
+  /* Smooth entrance */
+  animation: fn-paywall-slide-up 0.5s ease-out;
+}
+
+.fn-paywall-overlay__icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px;
+  color: #5D1F2D;
+}
+
+.fn-paywall-overlay__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.fn-paywall-overlay__title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1C1C1E;
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+
+.fn-paywall-overlay__description {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 16px;
+  color: #4A4A4A;
+  margin: 0 0 24px;
+  line-height: 1.5;
+}
+
+.fn-paywall-overlay__cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 32px;
+  background: #5D1F2D;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  width: 100%;
+  max-width: 280px;
+}
+
+.fn-paywall-overlay__cta-button:hover {
+  background: #4A1824;
+  transform: translateY(-1px);
+}
+
+.fn-paywall-overlay__cta-button:active {
+  transform: translateY(0);
+}
+
+.fn-paywall-overlay__secondary-link {
+  display: block;
+  margin-top: 16px;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  color: #4A4A4A;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.fn-paywall-overlay__secondary-link:hover {
+  color: #5D1F2D;
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fn-paywall-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fn-paywall-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .fn-paywall-overlay__cta-container {
+    padding: 32px 16px;
+  }
+
+  .fn-paywall-overlay__cta-card {
+    padding: 24px;
+  }
+
+  .fn-paywall-overlay__title {
+    font-size: 20px;
+  }
+
+  .fn-paywall-overlay__description {
+    font-size: 14px;
+  }
+
+  .fn-paywall-overlay__cta-button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}

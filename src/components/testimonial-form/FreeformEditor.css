@@ -1,0 +1,107 @@
+/* FreeformEditor - Text area for free-form testimonials */
+
+.fn-freeform-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Label */
+.fn-freeform-editor__label {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1C1C1E;
+}
+
+/* Wrapper */
+.fn-freeform-editor__wrapper {
+  position: relative;
+}
+
+/* Textarea */
+.fn-freeform-editor__textarea {
+  width: 100%;
+  padding: 16px;
+  background: #FFFFFF;
+  border: 2px solid #E5E5E0;
+  border-radius: 8px;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #1C1C1E;
+  resize: vertical;
+  min-height: 180px;
+  transition: border-color 0.15s ease;
+}
+
+.fn-freeform-editor__textarea::placeholder {
+  color: #9CA3AF;
+}
+
+.fn-freeform-editor__textarea:focus {
+  outline: none;
+  border-color: #5D1F2D;
+}
+
+.fn-freeform-editor__textarea--error {
+  border-color: #EF4444;
+}
+
+.fn-freeform-editor__textarea--error:focus {
+  border-color: #EF4444;
+}
+
+/* Footer */
+.fn-freeform-editor__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Hint */
+.fn-freeform-editor__hint {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  color: #4A4A4A;
+}
+
+/* Error message */
+.fn-freeform-editor__error {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  color: #EF4444;
+}
+
+/* Success message */
+.fn-freeform-editor__success {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  color: #22C55E;
+}
+
+/* Character count */
+.fn-freeform-editor__count {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  color: #4A4A4A;
+  margin-left: auto;
+}
+
+.fn-freeform-editor__count--error {
+  color: #EF4444;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .fn-freeform-editor__textarea {
+    min-height: 150px;
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+
+  .fn-freeform-editor__footer {
+    flex-wrap: wrap;
+  }
+}

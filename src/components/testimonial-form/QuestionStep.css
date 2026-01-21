@@ -1,0 +1,130 @@
+/* QuestionStep - Single question in guided flow */
+
+.fn-question-step {
+  margin: 24px 0;
+}
+
+/* Question */
+.fn-question-step__question {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1C1C1E;
+  margin: 0 0 20px 0;
+}
+
+/* Options */
+.fn-question-step__options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Option */
+.fn-question-step__option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: #FFFFFF;
+  border: 1px solid #E5E5E0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.fn-question-step__option:hover {
+  border-color: #5D1F2D;
+}
+
+.fn-question-step__option--selected {
+  border-color: #5D1F2D;
+  background: rgba(93, 31, 45, 0.05);
+}
+
+/* Hidden radio */
+.fn-question-step__radio {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Custom radio circle */
+.fn-question-step__radio-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #E5E5E0;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+}
+
+.fn-question-step__option--selected .fn-question-step__radio-circle {
+  border-color: #5D1F2D;
+}
+
+.fn-question-step__option--selected .fn-question-step__radio-circle::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #5D1F2D;
+  border-radius: 50%;
+}
+
+/* Option label */
+.fn-question-step__option-label {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 15px;
+  color: #1C1C1E;
+}
+
+/* Custom option */
+.fn-question-step__option--custom {
+  flex-wrap: wrap;
+}
+
+.fn-question-step__custom-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 8px 12px;
+  background: #FAF9F6;
+  border: 1px solid #E5E5E0;
+  border-radius: 6px;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  color: #1C1C1E;
+  transition: border-color 0.15s ease;
+}
+
+.fn-question-step__custom-input::placeholder {
+  color: #9CA3AF;
+}
+
+.fn-question-step__custom-input:focus {
+  outline: none;
+  border-color: #5D1F2D;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .fn-question-step__question {
+    font-size: 18px;
+  }
+
+  .fn-question-step__option {
+    padding: 14px;
+  }
+
+  .fn-question-step__option-label {
+    font-size: 14px;
+  }
+
+  .fn-question-step__custom-input {
+    width: 100%;
+    margin-top: 8px;
+  }
+}

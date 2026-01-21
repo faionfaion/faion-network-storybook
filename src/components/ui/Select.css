@@ -1,0 +1,236 @@
+/**
+ * Select Component Styles
+ * Faion Network Design System - Digital Journal Theme
+ */
+
+/* ========== SELECT TRIGGER ========== */
+
+.fn-select-trigger {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid var(--dj-taupe-grey, #E5E5E0);
+  border-radius: var(--radius-md, 6px);
+  background-color: var(--dj-pure-cream, #FFFFFF);
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-base, 1rem);
+  line-height: var(--leading-normal, 1.5);
+  color: var(--dj-soft-charcoal, #1C1C1E);
+  cursor: pointer;
+  transition: all var(--duration-fast, 150ms) var(--ease-default);
+  outline: none;
+}
+
+.fn-select-trigger:hover:not(:disabled) {
+  border-color: #CFCFC8;
+}
+
+.fn-select-trigger:focus,
+.fn-select-trigger[data-state="open"] {
+  border-color: var(--dj-deep-burgundy, #5D1F2D);
+  box-shadow: 0 0 0 3px rgba(93, 31, 45, 0.15);
+}
+
+.fn-select-trigger:disabled {
+  background-color: var(--dj-taupe-grey, #E5E5E0);
+  color: var(--dj-graphite, #4A4A4A);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Placeholder text */
+.fn-select-trigger[data-placeholder] .fn-select-value,
+.fn-select-trigger .fn-select-placeholder {
+  color: var(--dj-graphite, #4A4A4A);
+  opacity: 0.7;
+}
+
+/* Icon */
+.fn-select-trigger__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  color: var(--dj-graphite, #4A4A4A);
+  flex-shrink: 0;
+  transition: transform var(--duration-fast, 150ms) var(--ease-default);
+}
+
+.fn-select-trigger[data-state="open"] .fn-select-trigger__icon {
+  transform: rotate(180deg);
+}
+
+/* ========== SIZE VARIANTS ========== */
+
+.fn-select-trigger--small {
+  padding: 8px 12px;
+  font-size: var(--text-sm, 0.875rem);
+}
+
+.fn-select-trigger--large {
+  padding: 14px 18px;
+  font-size: var(--text-lg, 1.125rem);
+}
+
+/* ========== SELECT CONTENT (Dropdown) ========== */
+
+.fn-select-content {
+  position: relative;
+  z-index: 50;
+  min-width: 180px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 4px;
+  border: 1px solid var(--dj-taupe-grey, #E5E5E0);
+  border-radius: var(--radius-md, 6px);
+  background-color: var(--dj-pure-cream, #FFFFFF);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  animation: fn-select-open 150ms ease-out;
+}
+
+@keyframes fn-select-open {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== SELECT ITEM ========== */
+
+.fn-select-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 32px 8px 12px;
+  border-radius: 4px;
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--dj-soft-charcoal, #1C1C1E);
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  transition: background-color var(--duration-fast, 150ms) var(--ease-default);
+}
+
+.fn-select-item:hover,
+.fn-select-item:focus {
+  background-color: var(--dj-warm-alabaster, #FAF9F6);
+}
+
+/* Selected item */
+.fn-select-item[data-state="checked"],
+.fn-select-item--selected {
+  background-color: rgba(93, 31, 45, 0.08);
+  color: var(--dj-deep-burgundy, #5D1F2D);
+}
+
+.fn-select-item[data-state="checked"]:hover,
+.fn-select-item--selected:hover {
+  background-color: rgba(93, 31, 45, 0.12);
+}
+
+/* Disabled item */
+.fn-select-item[data-disabled],
+.fn-select-item--disabled {
+  color: var(--dj-graphite, #4A4A4A);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Check indicator */
+.fn-select-item__indicator {
+  position: absolute;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  color: var(--dj-deep-burgundy, #5D1F2D);
+}
+
+/* ========== SELECT LABEL (Group header) ========== */
+
+.fn-select-label {
+  padding: 8px 12px 4px;
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--dj-graphite, #4A4A4A);
+}
+
+/* ========== SELECT SEPARATOR ========== */
+
+.fn-select-separator {
+  height: 1px;
+  margin: 4px -4px;
+  background-color: var(--dj-taupe-grey, #E5E5E0);
+}
+
+/* ========== SELECT SCROLL BUTTONS ========== */
+
+.fn-select-scroll-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 0;
+  color: var(--dj-graphite, #4A4A4A);
+  cursor: pointer;
+}
+
+.fn-select-scroll-button:hover {
+  color: var(--dj-soft-charcoal, #1C1C1E);
+}
+
+/* ========== SELECT WITH FORM FIELD ========== */
+
+.fn-select-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.fn-select-field__label {
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-sm, 0.875rem);
+  font-weight: 500;
+  color: var(--dj-soft-charcoal, #1C1C1E);
+}
+
+.fn-select-field__label--required::after {
+  content: ' *';
+  color: var(--dj-danger, #EF4444);
+}
+
+.fn-select-field__hint {
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-xs, 0.75rem);
+  color: var(--dj-graphite, #4A4A4A);
+}
+
+.fn-select-field__error {
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-xs, 0.75rem);
+  color: var(--dj-danger, #EF4444);
+}
+
+/* Error state trigger */
+.fn-select-trigger--error {
+  border-color: var(--dj-danger, #EF4444);
+}
+
+.fn-select-trigger--error:focus {
+  border-color: var(--dj-danger, #EF4444);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+}

@@ -1,0 +1,70 @@
+/* RewardBanner - Reward incentive banner */
+
+.fn-reward-banner {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  background: linear-gradient(135deg, #5D1F2D 0%, #7A3A4A 100%);
+  border-radius: 12px;
+  margin: 24px 0;
+}
+
+/* Icon */
+.fn-reward-banner__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  color: #FFFFFF;
+}
+
+/* Content */
+.fn-reward-banner__content {
+  flex: 1;
+}
+
+/* Title */
+.fn-reward-banner__title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0 0 4px 0;
+}
+
+/* Description */
+.fn-reward-banner__description {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .fn-reward-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 16px;
+  }
+
+  .fn-reward-banner__icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    align-self: center;
+  }
+
+  .fn-reward-banner__title {
+    font-size: 16px;
+  }
+
+  .fn-reward-banner__description {
+    font-size: 13px;
+  }
+}

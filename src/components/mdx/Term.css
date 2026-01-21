@@ -1,0 +1,131 @@
+/* Term - Inline term with tooltip for MDX */
+
+.fn-term {
+  position: relative;
+  display: inline;
+  cursor: help;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: #5D1F2D;
+  text-underline-offset: 3px;
+  color: inherit;
+  outline: none;
+}
+
+a.fn-term {
+  cursor: pointer;
+}
+
+.fn-term:hover,
+.fn-term:focus {
+  color: #5D1F2D;
+}
+
+.fn-term:focus-visible {
+  outline: 2px solid #5D1F2D;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Text */
+.fn-term__text {
+  font-weight: 500;
+}
+
+/* Tooltip */
+.fn-term__tooltip {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: 280px;
+  padding: 16px;
+  background: #1C1C1E;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.fn-term__tooltip--top {
+  bottom: 100%;
+  margin-bottom: 8px;
+}
+
+.fn-term__tooltip--bottom {
+  top: 100%;
+  margin-top: 8px;
+}
+
+.fn-term__tooltip--visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Tooltip arrow */
+.fn-term__tooltip::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+}
+
+.fn-term__tooltip--top::before {
+  top: 100%;
+  border-top-color: #1C1C1E;
+}
+
+.fn-term__tooltip--bottom::before {
+  bottom: 100%;
+  border-bottom-color: #1C1C1E;
+}
+
+/* Tooltip content */
+.fn-term__tooltip-term {
+  display: block;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+}
+
+.fn-term__tooltip-definition {
+  display: block;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #E5E5E0;
+}
+
+.fn-term__tooltip-link {
+  display: block;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #5D1F2D;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #3D3D40;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .fn-term__tooltip {
+    width: 240px;
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .fn-term__tooltip-term {
+    font-size: 13px;
+  }
+
+  .fn-term__tooltip-definition {
+    font-size: 12px;
+  }
+}

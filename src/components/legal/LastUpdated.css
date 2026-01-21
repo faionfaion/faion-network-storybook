@@ -1,0 +1,28 @@
+/* LastUpdated - Legal document update timestamp */
+
+.fn-last-updated {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  color: #4A4A4A;
+}
+
+/* Label */
+.fn-last-updated__label {
+  color: #6B6B6B;
+}
+
+/* Date */
+.fn-last-updated__date {
+  color: #1C1C1E;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .fn-last-updated {
+    font-size: 13px;
+  }
+}

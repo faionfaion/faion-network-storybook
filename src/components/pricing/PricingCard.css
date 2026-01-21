@@ -1,0 +1,196 @@
+/**
+ * PricingCard Component Styles
+ * Faion Network Design System - Digital Journal Theme
+ */
+
+.fn-pricing-card {
+  position: relative;
+  background-color: var(--dj-pure-cream, #FFFFFF);
+  border: 1px solid var(--dj-taupe-grey, #E5E5E0);
+  border-radius: var(--radius-lg, 8px);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow var(--duration-fast, 150ms) var(--ease-default);
+}
+
+.fn-pricing-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Recommended variant */
+.fn-pricing-card--recommended {
+  border-color: var(--dj-deep-burgundy, #5D1F2D);
+  border-width: 2px;
+}
+
+/* Badge */
+.fn-pricing-card__badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--dj-deep-burgundy, #5D1F2D);
+  color: #FFFFFF;
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-xs, 0.75rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 6px 16px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+/* Header */
+.fn-pricing-card__header {
+  margin-bottom: 24px;
+}
+
+.fn-pricing-card__name {
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: var(--text-xl, 1.25rem);
+  font-weight: 400;
+  color: var(--dj-soft-charcoal, #1C1C1E);
+  margin: 0 0 8px 0;
+}
+
+.fn-pricing-card__description {
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--dj-graphite, #4A4A4A);
+  margin: 0;
+  line-height: var(--leading-relaxed, 1.625);
+}
+
+/* Price */
+.fn-pricing-card__price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.fn-pricing-card__original {
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-lg, 1.125rem);
+  color: var(--dj-graphite, #4A4A4A);
+  text-decoration: line-through;
+}
+
+.fn-pricing-card__amount {
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--dj-soft-charcoal, #1C1C1E);
+  line-height: 1;
+}
+
+.fn-pricing-card__period {
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--dj-graphite, #4A4A4A);
+}
+
+/* CTA */
+.fn-pricing-card__cta {
+  width: 100%;
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-base, 1rem);
+  font-weight: 500;
+  padding: 14px 24px;
+  border-radius: var(--radius-md, 6px);
+  cursor: pointer;
+  transition: all var(--duration-fast, 150ms) var(--ease-default);
+  outline: none;
+  margin-bottom: 24px;
+}
+
+.fn-pricing-card__cta--primary {
+  background-color: var(--dj-deep-burgundy, #5D1F2D);
+  color: #FFFFFF;
+  border: none;
+}
+
+.fn-pricing-card__cta--primary:hover {
+  background-color: var(--dj-burgundy-dark, #4A1824);
+}
+
+.fn-pricing-card__cta--primary:focus-visible {
+  box-shadow: 0 0 0 3px rgba(93, 31, 45, 0.3);
+}
+
+.fn-pricing-card__cta--secondary {
+  background-color: transparent;
+  color: var(--dj-soft-charcoal, #1C1C1E);
+  border: 1px solid var(--dj-taupe-grey, #E5E5E0);
+}
+
+.fn-pricing-card__cta--secondary:hover {
+  border-color: var(--dj-soft-charcoal, #1C1C1E);
+}
+
+.fn-pricing-card__cta--secondary:focus-visible {
+  box-shadow: 0 0 0 3px rgba(28, 28, 30, 0.1);
+}
+
+.fn-pricing-card__cta:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Features */
+.fn-pricing-card__features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.fn-pricing-card__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.fn-pricing-card__feature-icon {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  margin-top: 2px;
+  color: var(--dj-deep-burgundy, #5D1F2D);
+}
+
+.fn-pricing-card__feature-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.fn-pricing-card__feature--excluded .fn-pricing-card__feature-icon {
+  color: var(--dj-taupe-grey, #E5E5E0);
+}
+
+.fn-pricing-card__feature-text {
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--dj-graphite, #4A4A4A);
+  line-height: 1.5;
+}
+
+.fn-pricing-card__feature--excluded .fn-pricing-card__feature-text {
+  color: var(--dj-taupe-grey, #E5E5E0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .fn-pricing-card {
+    padding: 24px;
+  }
+
+  .fn-pricing-card__amount {
+    font-size: 40px;
+  }
+}

@@ -1,0 +1,113 @@
+/* ModeSelector - Toggle between guided and freeform modes */
+
+.fn-mode-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Option */
+.fn-mode-selector__option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 20px;
+  background: #FFFFFF;
+  border: 2px solid #E5E5E0;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.fn-mode-selector__option:hover {
+  border-color: #5D1F2D;
+}
+
+.fn-mode-selector__option--active {
+  border-color: #5D1F2D;
+  background: rgba(93, 31, 45, 0.05);
+}
+
+/* Icon */
+.fn-mode-selector__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: #FAF9F6;
+  border-radius: 12px;
+  color: #4A4A4A;
+  margin-bottom: 16px;
+  transition: all 0.2s ease;
+}
+
+.fn-mode-selector__option--active .fn-mode-selector__icon {
+  background: #5D1F2D;
+  color: #FFFFFF;
+}
+
+/* Content */
+.fn-mode-selector__content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Title */
+.fn-mode-selector__title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1C1C1E;
+}
+
+/* Description */
+.fn-mode-selector__description {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  color: #4A4A4A;
+}
+
+/* Badge */
+.fn-mode-selector__badge {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #E5E5E0;
+  border-radius: 100px;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #4A4A4A;
+  margin-top: 8px;
+}
+
+.fn-mode-selector__option--active .fn-mode-selector__badge {
+  background: #5D1F2D;
+  color: #FFFFFF;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .fn-mode-selector {
+    grid-template-columns: 1fr;
+  }
+
+  .fn-mode-selector__option {
+    flex-direction: row;
+    text-align: left;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .fn-mode-selector__icon {
+    margin-bottom: 0;
+    width: 48px;
+    height: 48px;
+  }
+
+  .fn-mode-selector__badge {
+    margin-top: 4px;
+  }
+}

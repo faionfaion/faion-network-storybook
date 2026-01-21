@@ -1,0 +1,70 @@
+/* DashboardCard - Container card for dashboard sections */
+
+.fn-dashboard-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E5E0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Header */
+.fn-dashboard-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid #E5E5E0;
+}
+
+.fn-dashboard-card__title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1C1C1E;
+  margin: 0;
+}
+
+.fn-dashboard-card__action {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  background: #5D1F2D;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.fn-dashboard-card__action:hover {
+  background: #7A2B3D;
+}
+
+.fn-dashboard-card__action:focus-visible {
+  outline: 2px solid #5D1F2D;
+  outline-offset: 2px;
+}
+
+/* Content */
+.fn-dashboard-card__content {
+  padding: 24px;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .fn-dashboard-card__header {
+    padding: 16px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .fn-dashboard-card__title {
+    font-size: 16px;
+  }
+
+  .fn-dashboard-card__content {
+    padding: 20px;
+  }
+}

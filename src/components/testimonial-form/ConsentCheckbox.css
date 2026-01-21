@@ -1,0 +1,82 @@
+/* ConsentCheckbox - Consent checkbox for testimonials */
+
+.fn-consent-checkbox {
+  margin: 24px 0;
+}
+
+/* Label */
+.fn-consent-checkbox__label {
+  display: flex;
+  gap: 12px;
+  cursor: pointer;
+}
+
+/* Hidden input */
+.fn-consent-checkbox__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Custom checkbox */
+.fn-consent-checkbox__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  background: #FFFFFF;
+  border: 2px solid #E5E5E0;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+.fn-consent-checkbox__label:hover .fn-consent-checkbox__box {
+  border-color: #5D1F2D;
+}
+
+.fn-consent-checkbox__box--checked {
+  background: #5D1F2D;
+  border-color: #5D1F2D;
+  color: #FFFFFF;
+}
+
+.fn-consent-checkbox__input:focus-visible + .fn-consent-checkbox__box {
+  outline: 2px solid #5D1F2D;
+  outline-offset: 2px;
+}
+
+/* Text */
+.fn-consent-checkbox__text {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #4A4A4A;
+}
+
+/* Error state */
+.fn-consent-checkbox--error .fn-consent-checkbox__box {
+  border-color: #EF4444;
+}
+
+.fn-consent-checkbox--error .fn-consent-checkbox__text {
+  color: #EF4444;
+}
+
+/* Error message */
+.fn-consent-checkbox__error {
+  margin-top: 8px;
+  margin-left: 34px;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  color: #EF4444;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .fn-consent-checkbox__text {
+    font-size: 13px;
+  }
+}

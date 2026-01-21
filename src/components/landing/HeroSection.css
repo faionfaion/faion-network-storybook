@@ -1,0 +1,229 @@
+/**
+ * HeroSection Component Styles
+ * Faion Network Design System - Digital Journal Theme
+ */
+
+.fn-hero {
+  width: 100%;
+  background-color: var(--dj-warm-alabaster, #FAF9F6);
+  padding: 120px 32px;
+}
+
+.fn-hero__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.fn-hero__content {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Headline */
+.fn-hero__headline {
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--dj-soft-charcoal, #1C1C1E);
+  margin: 0 0 24px 0;
+}
+
+/* Subheadline */
+.fn-hero__subheadline {
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-lg, 1.125rem);
+  line-height: var(--leading-relaxed, 1.625);
+  color: var(--dj-graphite, #4A4A4A);
+  margin: 0 0 40px 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CTAs */
+.fn-hero__ctas {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.fn-hero__cta {
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-base, 1rem);
+  font-weight: 500;
+  padding: 14px 32px;
+  border-radius: var(--radius-md, 6px);
+  cursor: pointer;
+  transition: all var(--duration-fast, 150ms) var(--ease-default);
+  outline: none;
+}
+
+.fn-hero__cta--primary {
+  background-color: var(--dj-deep-burgundy, #5D1F2D);
+  color: #FFFFFF;
+  border: none;
+}
+
+.fn-hero__cta--primary:hover {
+  background-color: var(--dj-burgundy-dark, #4A1824);
+}
+
+.fn-hero__cta--primary:focus-visible {
+  box-shadow: 0 0 0 3px rgba(93, 31, 45, 0.3);
+}
+
+.fn-hero__cta--secondary {
+  background-color: transparent;
+  color: var(--dj-soft-charcoal, #1C1C1E);
+  border: 1px solid var(--dj-taupe-grey, #E5E5E0);
+}
+
+.fn-hero__cta--secondary:hover {
+  border-color: var(--dj-soft-charcoal, #1C1C1E);
+}
+
+.fn-hero__cta--secondary:focus-visible {
+  box-shadow: 0 0 0 3px rgba(28, 28, 30, 0.1);
+}
+
+/* Social Proof */
+.fn-hero__social-proof {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.fn-hero__avatars {
+  display: flex;
+}
+
+.fn-hero__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--dj-deep-burgundy, #5D1F2D);
+  color: #FFFFFF;
+  border: 2px solid var(--dj-warm-alabaster, #FAF9F6);
+  margin-right: -12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-sm, 0.875rem);
+  font-weight: 500;
+  overflow: hidden;
+}
+
+.fn-hero__avatar:last-child {
+  margin-right: 0;
+}
+
+.fn-hero__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fn-hero__social-text {
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--dj-graphite, #4A4A4A);
+  margin: 0;
+}
+
+/* Stats */
+.fn-hero__stats {
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+  margin-top: 80px;
+  padding-top: 48px;
+  border-top: 1px solid var(--dj-taupe-grey, #E5E5E0);
+}
+
+.fn-hero__stat {
+  text-align: center;
+}
+
+.fn-hero__stat-value {
+  display: block;
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--dj-deep-burgundy, #5D1F2D);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.fn-hero__stat-label {
+  display: block;
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--dj-graphite, #4A4A4A);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .fn-hero {
+    padding: 80px 24px;
+  }
+
+  .fn-hero__headline {
+    font-size: 44px;
+  }
+
+  .fn-hero__stats {
+    gap: 48px;
+  }
+
+  .fn-hero__stat-value {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fn-hero {
+    padding: 64px 16px;
+  }
+
+  .fn-hero__headline {
+    font-size: 36px;
+  }
+
+  .fn-hero__subheadline {
+    font-size: var(--text-base, 1rem);
+  }
+
+  .fn-hero__ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .fn-hero__cta {
+    width: 100%;
+  }
+
+  .fn-hero__social-proof {
+    flex-direction: column;
+  }
+
+  .fn-hero__stats {
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-top: 48px;
+    padding-top: 32px;
+  }
+
+  .fn-hero__stat {
+    flex: 1 1 40%;
+    min-width: 120px;
+  }
+
+  .fn-hero__stat-value {
+    font-size: 32px;
+  }
+}

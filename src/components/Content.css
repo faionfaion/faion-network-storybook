@@ -1,0 +1,342 @@
+/**
+ * Content Component Styles
+ * Faion Network Design System - "The Digital Journal"
+ * Responsive: 320px - 1440px
+ */
+
+/* ============================
+   Container - "The Book Column"
+   ============================ */
+.fn-content {
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (min-width: 640px) {
+  .fn-content {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .fn-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* Width variants */
+.fn-content--narrow {
+  max-width: 100%;
+}
+
+.fn-content--medium {
+  max-width: 100%;
+}
+
+.fn-content--wide {
+  max-width: 100%;
+}
+
+@media (min-width: 640px) {
+  .fn-content--narrow {
+    max-width: 500px;
+  }
+
+  .fn-content--medium {
+    max-width: 580px;
+  }
+
+  .fn-content--wide {
+    max-width: 700px;
+  }
+}
+
+@media (min-width: 768px) {
+  .fn-content--narrow {
+    max-width: 600px;
+  }
+
+  .fn-content--medium {
+    max-width: 700px;
+  }
+
+  .fn-content--wide {
+    max-width: 900px;
+  }
+}
+
+/* ============================
+   Headings - Serif Typography
+   ============================ */
+.fn-heading {
+  font-family: Georgia, Merriweather, serif;
+  font-weight: normal;
+  color: #1C1C1E;
+}
+
+/* H1 */
+.fn-heading--1 {
+  font-size: 32px;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 640px) {
+  .fn-heading--1 {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .fn-heading--1 {
+    font-size: 48px;
+    margin-bottom: 32px;
+  }
+}
+
+/* H2 */
+.fn-heading--2 {
+  font-size: 26px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 640px) {
+  .fn-heading--2 {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .fn-heading--2 {
+    font-size: 36px;
+    margin-bottom: 24px;
+  }
+}
+
+/* H3 */
+.fn-heading--3 {
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+@media (min-width: 640px) {
+  .fn-heading--3 {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 768px) {
+  .fn-heading--3 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+}
+
+/* H4 */
+.fn-heading--4 {
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+@media (min-width: 640px) {
+  .fn-heading--4 {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 768px) {
+  .fn-heading--4 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+}
+
+/* ============================
+   Text - Sans-Serif Typography
+   ============================ */
+.fn-text {
+  font-family: Inter, sans-serif;
+  color: #4A4A4A;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 640px) {
+  .fn-text {
+    margin-bottom: 24px;
+  }
+}
+
+/* Small */
+.fn-text--small {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (min-width: 640px) {
+  .fn-text--small {
+    font-size: 14px;
+  }
+}
+
+/* Base */
+.fn-text--base {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+@media (min-width: 640px) {
+  .fn-text--base {
+    font-size: 16px;
+  }
+}
+
+/* Large */
+.fn-text--large {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+@media (min-width: 640px) {
+  .fn-text--large {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 768px) {
+  .fn-text--large {
+    font-size: 18px;
+  }
+}
+
+/* ============================
+   Blockquote - Serif Italic
+   ============================ */
+.fn-blockquote {
+  border-left: 4px solid #5D1F2D;
+  padding-left: 16px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 640px) {
+  .fn-blockquote {
+    padding-left: 24px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+}
+
+.fn-blockquote__text {
+  font-family: Georgia, Merriweather, serif;
+  font-style: italic;
+  color: #1C1C1E;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+@media (min-width: 640px) {
+  .fn-blockquote__text {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .fn-blockquote__text {
+    font-size: 20px;
+  }
+}
+
+/* ============================
+   List - Burgundy Bullets
+   ============================ */
+.fn-list {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  color: #4A4A4A;
+  line-height: 1.7;
+  padding-left: 24px;
+  margin-bottom: 24px;
+  list-style: none;
+}
+
+.fn-list--ordered {
+  list-style: decimal;
+  list-style-position: outside;
+}
+
+.fn-list--ordered .fn-list__item::marker {
+  color: #5D1F2D;
+  font-weight: 600;
+}
+
+.fn-list__item {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.fn-list__item:last-child {
+  margin-bottom: 0;
+}
+
+/* Unordered list bullet */
+.fn-list:not(.fn-list--ordered) .fn-list__item::before {
+  content: '•';
+  position: absolute;
+  left: -24px;
+  color: #5D1F2D;
+  font-weight: bold;
+}
+
+/* ============================
+   Link - Burgundy Underlined
+   ============================ */
+.fn-link {
+  color: #5D1F2D;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: opacity 0.2s ease;
+}
+
+.fn-link:hover {
+  opacity: 0.8;
+}
+
+/* ============================
+   Divider - Chapter Break
+   ============================ */
+.fn-divider {
+  height: 1px;
+  background-color: #E5E5E0;
+  margin-top: 48px;
+  margin-bottom: 48px;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .fn-divider {
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+}
+
+/* ============================
+   Label - Uppercase Category
+   ============================ */
+.fn-label {
+  font-family: Inter, sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  color: #4A4A4A;
+}

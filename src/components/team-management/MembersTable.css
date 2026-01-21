@@ -1,0 +1,212 @@
+/* MembersTable - Table view of team members */
+
+.fn-members-table {
+  overflow-x: auto;
+}
+
+.fn-members-table__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.fn-members-table__table th {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6B6B6B;
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid #E5E5E0;
+}
+
+.fn-members-table__table td {
+  padding: 16px;
+  border-bottom: 1px solid #E5E5E0;
+  vertical-align: middle;
+}
+
+.fn-members-table__table tr:last-child td {
+  border-bottom: none;
+}
+
+.fn-members-table__row--clickable {
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.fn-members-table__row--clickable:hover {
+  background: #FAF9F6;
+}
+
+/* Member cell */
+.fn-members-table__member {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.fn-members-table__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #E5E5E0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #4A4A4A;
+  flex-shrink: 0;
+}
+
+.fn-members-table__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.fn-members-table__name {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1C1C1E;
+}
+
+.fn-members-table__email {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  color: #6B6B6B;
+}
+
+/* Role badge */
+.fn-members-table__role {
+  display: inline-block;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.fn-members-table__role--owner {
+  background: #FAE8EB;
+  color: #5D1F2D;
+}
+
+.fn-members-table__role--admin {
+  background: #DBEAFE;
+  color: #2563EB;
+}
+
+.fn-members-table__role--member {
+  background: #F3F4F6;
+  color: #4B5563;
+}
+
+/* Status */
+.fn-members-table__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.fn-members-table__status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.fn-members-table__status--active {
+  color: #16A34A;
+}
+
+.fn-members-table__status--active .fn-members-table__status-dot {
+  background: #16A34A;
+}
+
+.fn-members-table__status--pending {
+  color: #D97706;
+}
+
+.fn-members-table__status--pending .fn-members-table__status-dot {
+  background: #D97706;
+}
+
+/* Date */
+.fn-members-table__date {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  color: #4A4A4A;
+}
+
+/* Actions */
+.fn-members-table__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fn-members-table__role-select {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  padding: 6px 10px;
+  border: 1px solid #E5E5E0;
+  border-radius: 6px;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+
+.fn-members-table__role-select:focus {
+  outline: none;
+  border-color: #5D1F2D;
+}
+
+.fn-members-table__remove {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 12px;
+  background: none;
+  border: 1px solid #E5E5E0;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #4A4A4A;
+  transition: all 0.2s ease;
+}
+
+.fn-members-table__remove:hover {
+  border-color: #EF4444;
+  color: #EF4444;
+  background: #FEF2F2;
+}
+
+.fn-members-table__remove:focus-visible {
+  outline: 2px solid #5D1F2D;
+  outline-offset: 2px;
+}
+
+.fn-members-table__no-actions {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  color: #9CA3AF;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .fn-members-table__table th:nth-child(4),
+  .fn-members-table__table td:nth-child(4) {
+    display: none;
+  }
+
+  .fn-members-table__table th,
+  .fn-members-table__table td {
+    padding: 12px;
+  }
+}

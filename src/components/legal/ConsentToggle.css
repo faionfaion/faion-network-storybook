@@ -1,0 +1,107 @@
+/* ConsentToggle - Toggle switch for cookie consent */
+
+.fn-consent-toggle {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #E5E5E0;
+}
+
+.fn-consent-toggle:last-child {
+  border-bottom: none;
+}
+
+/* Content */
+.fn-consent-toggle__content {
+  flex: 1;
+}
+
+/* Label */
+.fn-consent-toggle__label {
+  display: block;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1C1C1E;
+  margin-bottom: 4px;
+}
+
+/* Description */
+.fn-consent-toggle__description {
+  display: block;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #4A4A4A;
+}
+
+/* Switch */
+.fn-consent-toggle__switch {
+  position: relative;
+  width: 48px;
+  height: 28px;
+  min-width: 48px;
+  background: #E5E5E0;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.fn-consent-toggle__switch--on {
+  background: #5D1F2D;
+}
+
+.fn-consent-toggle__switch:focus-visible {
+  outline: 2px solid #5D1F2D;
+  outline-offset: 2px;
+}
+
+.fn-consent-toggle__switch:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Thumb */
+.fn-consent-toggle__thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 24px;
+  height: 24px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.fn-consent-toggle__switch--on .fn-consent-toggle__thumb {
+  transform: translateX(20px);
+}
+
+/* Disabled state */
+.fn-consent-toggle--disabled {
+  opacity: 0.7;
+}
+
+.fn-consent-toggle--disabled .fn-consent-toggle__description {
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .fn-consent-toggle {
+    padding: 14px 0;
+  }
+
+  .fn-consent-toggle__label {
+    font-size: 14px;
+  }
+
+  .fn-consent-toggle__description {
+    font-size: 12px;
+  }
+}

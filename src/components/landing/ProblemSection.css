@@ -1,0 +1,194 @@
+/**
+ * ProblemSection Component Styles
+ * Faion Network Design System - Digital Journal Theme
+ */
+
+.fn-problem {
+  width: 100%;
+  padding: 120px 32px;
+}
+
+.fn-problem--default {
+  background-color: var(--dj-warm-alabaster, #FAF9F6);
+}
+
+.fn-problem--cream {
+  background-color: var(--dj-pure-cream, #FFFFFF);
+}
+
+.fn-problem__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.fn-problem__header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 64px;
+}
+
+.fn-problem__eyebrow {
+  display: inline-block;
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-sm, 0.875rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--dj-deep-burgundy, #5D1F2D);
+  margin-bottom: 16px;
+}
+
+.fn-problem__headline {
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--dj-soft-charcoal, #1C1C1E);
+  line-height: 1.2;
+  margin: 0 0 16px 0;
+}
+
+.fn-problem__subheadline {
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-lg, 1.125rem);
+  color: var(--dj-graphite, #4A4A4A);
+  line-height: var(--leading-relaxed, 1.625);
+  margin: 0;
+}
+
+/* Pain Points */
+.fn-problem__points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.fn-problem__point {
+  background-color: var(--dj-pure-cream, #FFFFFF);
+  border: 1px solid var(--dj-taupe-grey, #E5E5E0);
+  border-radius: var(--radius-lg, 8px);
+  padding: 32px;
+  text-align: center;
+  transition: box-shadow var(--duration-fast, 150ms) var(--ease-default);
+}
+
+.fn-problem--cream .fn-problem__point {
+  background-color: var(--dj-warm-alabaster, #FAF9F6);
+}
+
+.fn-problem__point:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.fn-problem__point-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 20px;
+  color: var(--dj-deep-burgundy, #5D1F2D);
+}
+
+.fn-problem__point-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.fn-problem__point-title {
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: var(--text-xl, 1.25rem);
+  font-weight: 400;
+  color: var(--dj-soft-charcoal, #1C1C1E);
+  margin: 0 0 12px 0;
+}
+
+.fn-problem__point-desc {
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--dj-graphite, #4A4A4A);
+  line-height: var(--leading-relaxed, 1.625);
+  margin: 0;
+}
+
+/* Stats */
+.fn-problem__stats {
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+  margin-top: 64px;
+  padding-top: 48px;
+  border-top: 1px solid var(--dj-taupe-grey, #E5E5E0);
+}
+
+.fn-problem__stat {
+  text-align: center;
+}
+
+.fn-problem__stat-value {
+  display: block;
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--dj-soft-charcoal, #1C1C1E);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.fn-problem__stat-label {
+  display: block;
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--dj-graphite, #4A4A4A);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .fn-problem {
+    padding: 80px 24px;
+  }
+
+  .fn-problem__headline {
+    font-size: 32px;
+  }
+
+  .fn-problem__points {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fn-problem {
+    padding: 64px 16px;
+  }
+
+  .fn-problem__header {
+    margin-bottom: 48px;
+  }
+
+  .fn-problem__headline {
+    font-size: 28px;
+  }
+
+  .fn-problem__points {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .fn-problem__point {
+    padding: 24px;
+  }
+
+  .fn-problem__stats {
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-top: 48px;
+    padding-top: 32px;
+  }
+
+  .fn-problem__stat {
+    flex: 1 1 40%;
+    min-width: 120px;
+  }
+
+  .fn-problem__stat-value {
+    font-size: 28px;
+  }
+}

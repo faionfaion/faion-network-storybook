@@ -1,0 +1,236 @@
+/* LanguageSelector - Dropdown for selecting UI language */
+
+.fn-language-selector {
+  position: relative;
+  display: inline-block;
+}
+
+/* Trigger button */
+.fn-language-selector__trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #FFFFFF;
+  border: 1px solid #E5E5E0;
+  border-radius: 8px;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1C1C1E;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.fn-language-selector__trigger:hover:not(:disabled) {
+  border-color: #5D1F2D;
+  background: #FAF9F6;
+}
+
+.fn-language-selector__trigger:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Flag */
+.fn-language-selector__flag {
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* Text */
+.fn-language-selector__text {
+  white-space: nowrap;
+}
+
+/* Code (minimal variant) */
+.fn-language-selector__code {
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+/* Icon */
+.fn-language-selector__icon {
+  width: 16px;
+  height: 16px;
+  color: #4A4A4A;
+}
+
+.fn-language-selector__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Chevron */
+.fn-language-selector__chevron {
+  width: 16px;
+  height: 16px;
+  color: #4A4A4A;
+  transition: transform 0.2s ease;
+}
+
+.fn-language-selector__chevron svg {
+  width: 100%;
+  height: 100%;
+}
+
+.fn-language-selector--open .fn-language-selector__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.fn-language-selector__dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  min-width: 200px;
+  background: #FFFFFF;
+  border: 1px solid #E5E5E0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow: hidden;
+  animation: fn-dropdown-fade-in 0.15s ease;
+}
+
+@keyframes fn-dropdown-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Option */
+.fn-language-selector__option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 14px;
+  background: transparent;
+  border: none;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  color: #1C1C1E;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  text-align: left;
+}
+
+.fn-language-selector__option:hover {
+  background: #FAF9F6;
+}
+
+.fn-language-selector__option--selected {
+  background: #FAF9F6;
+}
+
+.fn-language-selector__option-flag {
+  font-size: 18px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.fn-language-selector__option-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.fn-language-selector__option-name {
+  font-weight: 500;
+  color: #1C1C1E;
+}
+
+.fn-language-selector__option-english {
+  font-size: 12px;
+  color: #4A4A4A;
+  margin-top: 1px;
+}
+
+.fn-language-selector__option-check {
+  width: 16px;
+  height: 16px;
+  color: #5D1F2D;
+  flex-shrink: 0;
+}
+
+.fn-language-selector__option-check svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Size variants */
+.fn-language-selector--sm .fn-language-selector__trigger {
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+.fn-language-selector--sm .fn-language-selector__flag {
+  font-size: 14px;
+}
+
+.fn-language-selector--lg .fn-language-selector__trigger {
+  padding: 12px 16px;
+  font-size: 15px;
+}
+
+.fn-language-selector--lg .fn-language-selector__flag {
+  font-size: 18px;
+}
+
+/* Compact variant */
+.fn-language-selector--compact .fn-language-selector__trigger {
+  padding: 6px 10px;
+  gap: 6px;
+}
+
+.fn-language-selector--compact .fn-language-selector__text {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .fn-language-selector--compact .fn-language-selector__text {
+    display: block;
+  }
+}
+
+/* Minimal variant */
+.fn-language-selector--minimal .fn-language-selector__trigger {
+  padding: 6px 8px;
+  gap: 4px;
+  background: transparent;
+  border: none;
+}
+
+.fn-language-selector--minimal .fn-language-selector__trigger:hover:not(:disabled) {
+  background: #E5E5E0;
+}
+
+.fn-language-selector--minimal .fn-language-selector__dropdown {
+  right: 0;
+  left: auto;
+}
+
+/* Disabled state */
+.fn-language-selector--disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .fn-language-selector__dropdown {
+    min-width: 180px;
+  }
+
+  .fn-language-selector__option {
+    padding: 8px 12px;
+  }
+}

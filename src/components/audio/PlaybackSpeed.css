@@ -1,0 +1,47 @@
+/* PlaybackSpeed - Speed selector for audio/video playback */
+
+.fn-playback-speed {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.fn-playback-speed__option {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 12px;
+  background: #FAF9F6;
+  color: #4A4A4A;
+  border: 1px solid #E5E5E0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.fn-playback-speed__option:hover {
+  border-color: #5D1F2D;
+  color: #5D1F2D;
+}
+
+.fn-playback-speed__option--active {
+  background: #5D1F2D;
+  color: #FFFFFF;
+  border-color: #5D1F2D;
+}
+
+.fn-playback-speed__option:focus-visible {
+  outline: 2px solid #5D1F2D;
+  outline-offset: 2px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .fn-playback-speed {
+    gap: 4px;
+  }
+
+  .fn-playback-speed__option {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+}

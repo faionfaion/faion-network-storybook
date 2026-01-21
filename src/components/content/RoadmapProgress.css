@@ -1,0 +1,123 @@
+/* RoadmapProgress - Progress bar for roadmap completion */
+
+.fn-roadmap-progress {
+  font-family: Inter, system-ui, sans-serif;
+}
+
+/* Header with count */
+.fn-roadmap-progress__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.fn-roadmap-progress__label {
+  font-size: 12px;
+  color: #4A4A4A;
+}
+
+.fn-roadmap-progress__count {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1C1C1E;
+}
+
+.fn-roadmap-progress__count span {
+  color: #5D1F2D;
+}
+
+/* Progress bar container */
+.fn-roadmap-progress__bar {
+  height: 8px;
+  background: #E5E5E0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Progress fill */
+.fn-roadmap-progress__fill {
+  height: 100%;
+  background: #5D1F2D;
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+/* Animated variant */
+.fn-roadmap-progress--animated .fn-roadmap-progress__fill {
+  animation: fn-roadmap-fill 1s ease-out;
+}
+
+@keyframes fn-roadmap-fill {
+  from {
+    width: 0;
+  }
+}
+
+/* Percentage display */
+.fn-roadmap-progress__percentage {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #5D1F2D;
+  text-align: right;
+}
+
+/* Compact variant */
+.fn-roadmap-progress--compact {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.fn-roadmap-progress--compact .fn-roadmap-progress__header {
+  display: none;
+}
+
+.fn-roadmap-progress--compact .fn-roadmap-progress__bar {
+  flex: 1;
+  height: 6px;
+}
+
+.fn-roadmap-progress--compact .fn-roadmap-progress__percentage {
+  margin-top: 0;
+  font-size: 12px;
+  min-width: 36px;
+}
+
+/* Large variant */
+.fn-roadmap-progress--large .fn-roadmap-progress__bar {
+  height: 12px;
+}
+
+.fn-roadmap-progress--large .fn-roadmap-progress__label,
+.fn-roadmap-progress--large .fn-roadmap-progress__count {
+  font-size: 14px;
+}
+
+/* Step markers */
+.fn-roadmap-progress__markers {
+  position: relative;
+  margin-top: 8px;
+  height: 8px;
+}
+
+.fn-roadmap-progress__marker {
+  position: absolute;
+  top: 0;
+  width: 8px;
+  height: 8px;
+  background: #E5E5E0;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.fn-roadmap-progress__marker--completed {
+  background: #5D1F2D;
+}
+
+.fn-roadmap-progress__marker--current {
+  background: #FFFFFF;
+  border: 2px solid #5D1F2D;
+  box-sizing: border-box;
+}

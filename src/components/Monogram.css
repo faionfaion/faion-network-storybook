@@ -1,0 +1,117 @@
+/**
+ * Monogram Component Styles
+ * Faion Network Design System - "The Publisher's Seal"
+ */
+
+.fn-monogram {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.fn-monogram--button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+}
+
+.fn-monogram--button:focus-visible .fn-monogram__mark {
+  box-shadow: 0 0 0 3px rgba(93, 31, 45, 0.3);
+}
+
+.fn-monogram__mark {
+  background-color: var(--dj-deep-burgundy, #5D1F2D);
+  border-radius: var(--radius-sm, 4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--duration-fast, 150ms) var(--ease-default);
+}
+
+.fn-monogram--button:hover .fn-monogram__mark {
+  background-color: var(--dj-burgundy-dark, #4A1824);
+}
+
+.fn-monogram__text {
+  font-family: var(--font-serif, Georgia, serif);
+  font-weight: bold;
+  color: var(--dj-warm-alabaster, #FAF9F6);
+  letter-spacing: -0.02em;
+}
+
+.fn-monogram__divider {
+  width: 1px;
+  height: 20px;
+  background-color: var(--dj-taupe-grey, #E5E5E0);
+}
+
+.fn-monogram__label {
+  font-family: var(--font-sans, Inter, sans-serif);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  color: var(--dj-graphite, #4A4A4A);
+  transition: color var(--duration-fast, 150ms) var(--ease-default);
+}
+
+.fn-monogram--button:hover .fn-monogram__label {
+  color: var(--dj-soft-charcoal, #1C1C1E);
+}
+
+/* ========== SIZE VARIANTS ========== */
+
+/* Size: Small */
+.fn-monogram--small .fn-monogram__mark {
+  width: 32px;
+  height: 32px;
+}
+
+.fn-monogram--small .fn-monogram__text {
+  font-size: 14px;
+}
+
+.fn-monogram--small .fn-monogram__divider {
+  height: 16px;
+}
+
+.fn-monogram--small .fn-monogram__label {
+  font-size: 10px;
+}
+
+/* Size: Medium (default) */
+.fn-monogram--medium .fn-monogram__mark {
+  width: 40px;
+  height: 40px;
+}
+
+.fn-monogram--medium .fn-monogram__text {
+  font-size: 16px;
+}
+
+.fn-monogram--medium .fn-monogram__divider {
+  height: 20px;
+}
+
+.fn-monogram--medium .fn-monogram__label {
+  font-size: 12px;
+}
+
+/* Size: Large */
+.fn-monogram--large .fn-monogram__mark {
+  width: 56px;
+  height: 56px;
+}
+
+.fn-monogram--large .fn-monogram__text {
+  font-size: 22px;
+}
+
+.fn-monogram--large .fn-monogram__divider {
+  height: 28px;
+}
+
+.fn-monogram--large .fn-monogram__label {
+  font-size: 14px;
+}

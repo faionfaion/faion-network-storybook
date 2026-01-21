@@ -1,0 +1,214 @@
+/* InviteModal - Team member invitation modal */
+
+.fn-invite-modal__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  padding: 20px;
+}
+
+.fn-invite-modal {
+  background: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  max-width: 480px;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Header */
+.fn-invite-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 24px 0;
+}
+
+.fn-invite-modal__title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1C1C1E;
+  margin: 0;
+}
+
+.fn-invite-modal__close {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  color: #4A4A4A;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.fn-invite-modal__close:hover {
+  background: #FAF9F6;
+  color: #1C1C1E;
+}
+
+.fn-invite-modal__close:focus-visible {
+  outline: 2px solid #5D1F2D;
+  outline-offset: 2px;
+}
+
+/* Content */
+.fn-invite-modal__content {
+  padding: 24px;
+}
+
+/* Error */
+.fn-invite-modal__error {
+  background: #FEE2E2;
+  border: 1px solid #FECACA;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  color: #991B1B;
+}
+
+/* Field */
+.fn-invite-modal__field {
+  margin-bottom: 20px;
+}
+
+.fn-invite-modal__field:last-child {
+  margin-bottom: 0;
+}
+
+.fn-invite-modal__label {
+  display: block;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1C1C1E;
+  margin-bottom: 6px;
+}
+
+.fn-invite-modal__textarea,
+.fn-invite-modal__select {
+  width: 100%;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 15px;
+  color: #1C1C1E;
+  background: #FFFFFF;
+  border: 1px solid #E5E5E0;
+  border-radius: 8px;
+  padding: 12px 16px;
+  transition: all 0.2s ease;
+}
+
+.fn-invite-modal__textarea:focus,
+.fn-invite-modal__select:focus {
+  outline: none;
+  border-color: #5D1F2D;
+  box-shadow: 0 0 0 3px rgba(93, 31, 45, 0.1);
+}
+
+.fn-invite-modal__textarea::placeholder {
+  color: #9CA3AF;
+}
+
+.fn-invite-modal__textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.fn-invite-modal__select {
+  cursor: pointer;
+}
+
+/* Hint */
+.fn-invite-modal__hint {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 12px;
+  color: #6B6B6B;
+}
+
+/* Footer */
+.fn-invite-modal__footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 20px 24px;
+  border-top: 1px solid #E5E5E0;
+  background: #FAF9F6;
+}
+
+.fn-invite-modal__button {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.fn-invite-modal__button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.fn-invite-modal__button--primary {
+  background: #5D1F2D;
+  color: #FFFFFF;
+  border: none;
+}
+
+.fn-invite-modal__button--primary:hover:not(:disabled) {
+  background: #7A2B3D;
+}
+
+.fn-invite-modal__button--primary:focus-visible {
+  outline: 2px solid #5D1F2D;
+  outline-offset: 2px;
+}
+
+.fn-invite-modal__button--secondary {
+  background: #FFFFFF;
+  color: #1C1C1E;
+  border: 1px solid #E5E5E0;
+}
+
+.fn-invite-modal__button--secondary:hover:not(:disabled) {
+  border-color: #5D1F2D;
+}
+
+.fn-invite-modal__button--secondary:focus-visible {
+  outline: 2px solid #5D1F2D;
+  outline-offset: 2px;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .fn-invite-modal__overlay {
+    padding: 0;
+    align-items: flex-end;
+  }
+
+  .fn-invite-modal {
+    max-width: 100%;
+    border-radius: 12px 12px 0 0;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .fn-invite-modal__footer {
+    flex-direction: column-reverse;
+  }
+
+  .fn-invite-modal__button {
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,161 @@
+/**
+ * FinalCTASection Component Styles
+ * Faion Network Design System - Digital Journal Theme
+ */
+
+.fn-final-cta {
+  width: 100%;
+  padding: 120px 32px;
+}
+
+.fn-final-cta--default {
+  background-color: var(--dj-warm-alabaster, #FAF9F6);
+}
+
+.fn-final-cta--burgundy {
+  background-color: var(--dj-deep-burgundy, #5D1F2D);
+}
+
+.fn-final-cta__container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Headline */
+.fn-final-cta__headline {
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.15;
+  margin: 0 0 20px 0;
+}
+
+.fn-final-cta--default .fn-final-cta__headline {
+  color: var(--dj-soft-charcoal, #1C1C1E);
+}
+
+.fn-final-cta--burgundy .fn-final-cta__headline {
+  color: #FFFFFF;
+}
+
+/* Subheadline */
+.fn-final-cta__subheadline {
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-lg, 1.125rem);
+  line-height: var(--leading-relaxed, 1.625);
+  margin: 0 0 40px 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fn-final-cta--default .fn-final-cta__subheadline {
+  color: var(--dj-graphite, #4A4A4A);
+}
+
+.fn-final-cta--burgundy .fn-final-cta__subheadline {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Buttons */
+.fn-final-cta__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.fn-final-cta__btn {
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-base, 1rem);
+  font-weight: 500;
+  padding: 16px 40px;
+  border-radius: var(--radius-md, 6px);
+  cursor: pointer;
+  transition: all var(--duration-fast, 150ms) var(--ease-default);
+  outline: none;
+}
+
+/* Default variant buttons */
+.fn-final-cta--default .fn-final-cta__btn--primary {
+  background-color: var(--dj-deep-burgundy, #5D1F2D);
+  color: #FFFFFF;
+  border: none;
+}
+
+.fn-final-cta--default .fn-final-cta__btn--primary:hover {
+  background-color: var(--dj-burgundy-dark, #4A1824);
+}
+
+.fn-final-cta--default .fn-final-cta__btn--primary:focus-visible {
+  box-shadow: 0 0 0 3px rgba(93, 31, 45, 0.3);
+}
+
+.fn-final-cta--default .fn-final-cta__btn--secondary {
+  background-color: transparent;
+  color: var(--dj-soft-charcoal, #1C1C1E);
+  border: 1px solid var(--dj-taupe-grey, #E5E5E0);
+}
+
+.fn-final-cta--default .fn-final-cta__btn--secondary:hover {
+  border-color: var(--dj-soft-charcoal, #1C1C1E);
+}
+
+/* Burgundy variant buttons */
+.fn-final-cta--burgundy .fn-final-cta__btn--primary {
+  background-color: #FFFFFF;
+  color: var(--dj-deep-burgundy, #5D1F2D);
+  border: none;
+}
+
+.fn-final-cta--burgundy .fn-final-cta__btn--primary:hover {
+  background-color: var(--dj-warm-alabaster, #FAF9F6);
+}
+
+.fn-final-cta--burgundy .fn-final-cta__btn--primary:focus-visible {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.fn-final-cta--burgundy .fn-final-cta__btn--secondary {
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.fn-final-cta--burgundy .fn-final-cta__btn--secondary:hover {
+  border-color: #FFFFFF;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .fn-final-cta {
+    padding: 80px 24px;
+  }
+
+  .fn-final-cta__headline {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fn-final-cta {
+    padding: 64px 16px;
+  }
+
+  .fn-final-cta__headline {
+    font-size: 32px;
+  }
+
+  .fn-final-cta__subheadline {
+    font-size: var(--text-base, 1rem);
+    margin-bottom: 32px;
+  }
+
+  .fn-final-cta__buttons {
+    flex-direction: column;
+  }
+
+  .fn-final-cta__btn {
+    width: 100%;
+  }
+}

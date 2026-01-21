@@ -1,0 +1,98 @@
+/* Blockquote - Styled quote block for MDX */
+
+.fn-blockquote {
+  position: relative;
+  margin: 32px 0;
+  padding: 32px;
+  padding-left: 48px;
+  background: #FAF9F6;
+  border-left: 4px solid #5D1F2D;
+  border-radius: 0 8px 8px 0;
+}
+
+/* Quote icon */
+.fn-blockquote__icon {
+  position: absolute;
+  top: 24px;
+  left: -2px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #5D1F2D;
+  border-radius: 50%;
+  color: #FFFFFF;
+}
+
+.fn-blockquote__icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Content */
+.fn-blockquote__content {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 20px;
+  line-height: 1.6;
+  font-style: italic;
+  color: #1C1C1E;
+}
+
+.fn-blockquote__content p {
+  margin: 0;
+}
+
+.fn-blockquote__content p + p {
+  margin-top: 16px;
+}
+
+/* Footer */
+.fn-blockquote__footer {
+  margin-top: 20px;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  color: #4A4A4A;
+}
+
+/* Author */
+.fn-blockquote__author {
+  font-weight: 600;
+  font-style: normal;
+  color: #1C1C1E;
+}
+
+/* Separator */
+.fn-blockquote__separator {
+  margin: 0 4px;
+}
+
+/* Source */
+.fn-blockquote__source {
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .fn-blockquote {
+    margin: 24px 0;
+    padding: 24px;
+    padding-left: 40px;
+  }
+
+  .fn-blockquote__icon {
+    width: 40px;
+    height: 40px;
+    top: 20px;
+  }
+
+  .fn-blockquote__icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .fn-blockquote__content {
+    font-size: 17px;
+  }
+}

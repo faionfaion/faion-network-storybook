@@ -1,0 +1,89 @@
+/* StatCard - Single statistic display card */
+
+.fn-stat-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: #FFFFFF;
+  border: 1px solid #E5E5E0;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* Icon */
+.fn-stat-card__icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: #FAF9F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5D1F2D;
+}
+
+/* Content */
+.fn-stat-card__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fn-stat-card__label {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6B6B6B;
+}
+
+.fn-stat-card__value-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.fn-stat-card__value {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #1C1C1E;
+  line-height: 1.2;
+}
+
+/* Change indicator */
+.fn-stat-card__change {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.fn-stat-card__change--positive {
+  color: #16A34A;
+}
+
+.fn-stat-card__change--negative {
+  color: #DC2626;
+}
+
+.fn-stat-card__change--neutral {
+  color: #6B6B6B;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .fn-stat-card {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .fn-stat-card__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .fn-stat-card__value {
+    font-size: 24px;
+  }
+}

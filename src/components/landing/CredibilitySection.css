@@ -1,0 +1,251 @@
+/**
+ * CredibilitySection Component Styles
+ * Faion Network Design System - Digital Journal Theme
+ */
+
+.fn-credibility {
+  width: 100%;
+  background-color: var(--dj-warm-alabaster, #FAF9F6);
+  padding: 80px 32px;
+  border-top: 1px solid var(--dj-taupe-grey, #E5E5E0);
+  border-bottom: 1px solid var(--dj-taupe-grey, #E5E5E0);
+}
+
+.fn-credibility__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Variants */
+.fn-credibility--centered {
+  text-align: center;
+}
+
+.fn-credibility--minimal {
+  padding: 48px 32px;
+}
+
+/* Headline */
+.fn-credibility__headline {
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--dj-soft-charcoal, #1C1C1E);
+  margin: 0 0 48px 0;
+  text-align: center;
+}
+
+/* Metrics */
+.fn-credibility__metrics {
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+  margin-bottom: 48px;
+}
+
+.fn-credibility__metric {
+  text-align: center;
+}
+
+.fn-credibility__metric-value {
+  display: block;
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--dj-deep-burgundy, #5D1F2D);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.fn-credibility__metric-label {
+  display: block;
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--dj-graphite, #4A4A4A);
+}
+
+/* Logos Wrapper */
+.fn-credibility__logos-wrapper {
+  margin-bottom: 48px;
+}
+
+.fn-credibility__logos-label {
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-sm, 0.875rem);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--dj-graphite, #4A4A4A);
+  text-align: center;
+  margin: 0 0 24px 0;
+}
+
+/* Logos Grid */
+.fn-credibility__logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+}
+
+.fn-credibility__logo {
+  opacity: 0.6;
+  transition: opacity var(--duration-fast, 150ms) var(--ease-default);
+  filter: grayscale(100%);
+}
+
+.fn-credibility__logo:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+.fn-credibility__logo a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.fn-credibility__logo img {
+  max-height: 32px;
+  width: auto;
+  object-fit: contain;
+}
+
+.fn-credibility__logo-placeholder {
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-base, 1rem);
+  font-weight: 600;
+  color: var(--dj-graphite, #4A4A4A);
+  white-space: nowrap;
+}
+
+/* Trust Badges */
+.fn-credibility__badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+}
+
+.fn-credibility__badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  background-color: var(--dj-pure-cream, #FFFFFF);
+  border: 1px solid var(--dj-taupe-grey, #E5E5E0);
+  border-radius: var(--radius-md, 6px);
+}
+
+.fn-credibility__badge-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--dj-deep-burgundy, #5D1F2D);
+  flex-shrink: 0;
+}
+
+.fn-credibility__badge-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.fn-credibility__badge-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.fn-credibility__badge-text {
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-sm, 0.875rem);
+  font-weight: 600;
+  color: var(--dj-soft-charcoal, #1C1C1E);
+}
+
+.fn-credibility__badge-subtext {
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-size: var(--text-xs, 0.75rem);
+  color: var(--dj-graphite, #4A4A4A);
+}
+
+/* Minimal variant adjustments */
+.fn-credibility--minimal .fn-credibility__headline {
+  font-size: var(--text-lg, 1.125rem);
+  margin-bottom: 32px;
+}
+
+.fn-credibility--minimal .fn-credibility__logos {
+  gap: 32px;
+}
+
+.fn-credibility--minimal .fn-credibility__logo img {
+  max-height: 24px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .fn-credibility {
+    padding: 64px 24px;
+  }
+
+  .fn-credibility__metrics {
+    gap: 48px;
+  }
+
+  .fn-credibility__metric-value {
+    font-size: 32px;
+  }
+
+  .fn-credibility__logos {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fn-credibility {
+    padding: 48px 16px;
+  }
+
+  .fn-credibility__headline {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+
+  .fn-credibility__metrics {
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-bottom: 32px;
+  }
+
+  .fn-credibility__metric {
+    flex: 1 1 40%;
+    min-width: 120px;
+  }
+
+  .fn-credibility__metric-value {
+    font-size: 28px;
+  }
+
+  .fn-credibility__logos-wrapper {
+    margin-bottom: 32px;
+  }
+
+  .fn-credibility__logos {
+    gap: 24px;
+  }
+
+  .fn-credibility__logo img {
+    max-height: 24px;
+  }
+
+  .fn-credibility__badges {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .fn-credibility__badge {
+    justify-content: center;
+    padding: 12px 20px;
+  }
+}
