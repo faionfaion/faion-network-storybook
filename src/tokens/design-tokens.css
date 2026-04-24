@@ -1,0 +1,185 @@
+/* ============================================
+   FAION NETWORK DESIGN TOKENS
+   Source of truth: faion-network-storybook
+   Theme: "The Digital Journal"
+
+   Import this file in any consumer project.
+   DO NOT edit in consumer projects — edit here
+   and run sync-tokens.sh to propagate.
+   ============================================ */
+
+:root {
+  /* ========== COLORS: Core Palette ========== */
+  --fn-color-alabaster: #FAF9F6;
+  --fn-color-cream: #FFFFFF;
+  --fn-color-charcoal: #1C1C1E;
+  --fn-color-graphite: #4A4A4A;
+  --fn-color-taupe: #E5E5E0;
+  --fn-color-burgundy: #5D1F2D;
+  --fn-color-burgundy-hover: #7A3A4A;
+  --fn-color-burgundy-active: #4A1824;
+
+  /* ========== COLORS: Semantic ========== */
+  --fn-color-success: #22C55E;
+  --fn-color-success-light: #DCFCE7;
+  --fn-color-success-text: #166534;
+  --fn-color-warning: #F59E0B;
+  --fn-color-warning-light: #FEF3C7;
+  --fn-color-warning-text: #92400E;
+  --fn-color-danger: #EF4444;
+  --fn-color-danger-light: #FEE2E2;
+  --fn-color-danger-text: #991B1B;
+  --fn-color-info: #3B82F6;
+  --fn-color-info-light: #DBEAFE;
+  --fn-color-info-text: #1E40AF;
+
+  /* ========== COLORS: Surfaces ========== */
+  --fn-color-background: var(--fn-color-alabaster);
+  --fn-color-surface: var(--fn-color-cream);
+  --fn-color-muted: #F5F5F0;
+  --fn-color-border: var(--fn-color-taupe);
+  --fn-color-border-hover: #CFCFC8;
+  --fn-color-border-active: #D5D5D0;
+  --fn-color-input-bg: var(--fn-color-cream);
+
+  /* ========== COLORS: Text ========== */
+  --fn-color-text-primary: var(--fn-color-charcoal);
+  --fn-color-text-secondary: var(--fn-color-graphite);
+  --fn-color-text-muted: #6B7280;
+  --fn-color-text-on-primary: #FFFFFF;
+  --fn-color-text-on-destructive: #FFFFFF;
+
+  /* ========== COLORS: Brand Accent ========== */
+  --fn-color-primary: var(--fn-color-burgundy);
+  --fn-color-primary-hover: var(--fn-color-burgundy-hover);
+  --fn-color-primary-active: var(--fn-color-burgundy-active);
+  --fn-color-destructive: var(--fn-color-danger);
+  --fn-color-destructive-hover: #DC2626;
+  --fn-color-destructive-active: #B91C1C;
+
+  /* ========== COLORS: Level Badges ========== */
+  --fn-color-level-starter: #5D1F2D;
+  --fn-color-level-builder: #B45309;
+  --fn-color-level-scaler: #991B1B;
+  --fn-color-level-geek: #4C1D95;
+
+  /* ========== COLORS: Status ========== */
+  --fn-color-status-active: var(--fn-color-success);
+  --fn-color-status-inactive: #9CA3AF;
+  --fn-color-status-inactive-bg: #F5F5F5;
+
+  /* ========== COLORS: Focus ========== */
+  --fn-color-focus-ring: var(--fn-color-burgundy);
+  --fn-color-focus-ring-alpha: rgba(93, 31, 45, 0.25);
+  --fn-color-focus-ring-subtle: rgba(93, 31, 45, 0.15);
+  --fn-color-focus-ring-error: rgba(239, 68, 68, 0.15);
+
+  /* ========== TYPOGRAPHY: Font Families ========== */
+  --fn-font-heading: Georgia, 'Times New Roman', serif;
+  --fn-font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --fn-font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+
+  /* ========== TYPOGRAPHY: Font Weights ========== */
+  --fn-font-weight-normal: 400;
+  --fn-font-weight-medium: 500;
+  --fn-font-weight-semibold: 600;
+  --fn-font-weight-bold: 700;
+
+  /* ========== TYPOGRAPHY: Font Sizes ========== */
+  --fn-text-xs: 0.75rem;      /* 12px */
+  --fn-text-sm: 0.875rem;     /* 14px */
+  --fn-text-base: 1rem;       /* 16px */
+  --fn-text-lg: 1.125rem;     /* 18px */
+  --fn-text-xl: 1.25rem;      /* 20px */
+  --fn-text-2xl: 1.5rem;      /* 24px */
+  --fn-text-3xl: 1.875rem;    /* 30px */
+  --fn-text-4xl: 2.25rem;     /* 36px */
+  --fn-text-5xl: 3rem;        /* 48px */
+  --fn-text-6xl: 3.75rem;     /* 60px */
+  --fn-text-7xl: 4.5rem;      /* 72px */
+
+  /* ========== TYPOGRAPHY: Line Heights ========== */
+  --fn-leading-none: 1;
+  --fn-leading-tight: 1.1;
+  --fn-leading-snug: 1.25;
+  --fn-leading-normal: 1.5;
+  --fn-leading-relaxed: 1.625;
+  --fn-leading-loose: 2;
+
+  /* ========== TYPOGRAPHY: Letter Spacing ========== */
+  --fn-tracking-tighter: -0.05em;
+  --fn-tracking-tight: -0.025em;
+  --fn-tracking-normal: 0;
+  --fn-tracking-wide: 0.025em;
+  --fn-tracking-wider: 0.05em;
+  --fn-tracking-widest: 0.1em;
+
+  /* ========== SPACING: 8-Point Grid ========== */
+  --fn-space-0: 0;
+  --fn-space-0-5: 0.125rem;   /* 2px */
+  --fn-space-1: 0.25rem;      /* 4px */
+  --fn-space-2: 0.5rem;       /* 8px */
+  --fn-space-3: 0.75rem;      /* 12px */
+  --fn-space-4: 1rem;         /* 16px */
+  --fn-space-5: 1.25rem;      /* 20px */
+  --fn-space-6: 1.5rem;       /* 24px */
+  --fn-space-7: 1.75rem;      /* 28px */
+  --fn-space-8: 2rem;         /* 32px */
+  --fn-space-9: 2.25rem;      /* 36px */
+  --fn-space-10: 2.5rem;      /* 40px */
+  --fn-space-12: 3rem;        /* 48px */
+  --fn-space-14: 3.5rem;      /* 56px */
+  --fn-space-16: 4rem;        /* 64px */
+  --fn-space-20: 5rem;        /* 80px */
+  --fn-space-24: 6rem;        /* 96px */
+  --fn-space-28: 7rem;        /* 112px */
+  --fn-space-30: 7.5rem;      /* 120px */
+  --fn-space-32: 8rem;        /* 128px */
+  --fn-space-36: 9rem;        /* 144px */
+  --fn-space-40: 10rem;       /* 160px */
+  --fn-space-48: 12rem;       /* 192px */
+  --fn-space-56: 14rem;       /* 224px */
+  --fn-space-64: 16rem;       /* 256px */
+
+  /* ========== BORDER RADIUS ========== */
+  --fn-radius-none: 0;
+  --fn-radius-sm: 0.25rem;    /* 4px */
+  --fn-radius-md: 0.375rem;   /* 6px */
+  --fn-radius-lg: 0.5rem;     /* 8px */
+  --fn-radius-xl: 0.75rem;    /* 12px */
+  --fn-radius-2xl: 1rem;      /* 16px */
+  --fn-radius-3xl: 1.5rem;    /* 24px */
+  --fn-radius-full: 9999px;
+
+  /* ========== SHADOWS ========== */
+  --fn-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --fn-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --fn-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --fn-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --fn-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --fn-shadow-card: 0px 4px 16px rgba(93, 31, 45, 0.06);
+  --fn-shadow-card-hover: 0px 12px 24px rgba(93, 31, 45, 0.1);
+
+  /* ========== Z-INDEX ========== */
+  --fn-z-dropdown: 1000;
+  --fn-z-sticky: 1020;
+  --fn-z-fixed: 1030;
+  --fn-z-modal-backdrop: 1040;
+  --fn-z-modal: 1050;
+  --fn-z-popover: 1060;
+  --fn-z-tooltip: 1070;
+
+  /* ========== TRANSITIONS ========== */
+  --fn-duration-fast: 150ms;
+  --fn-duration-normal: 200ms;
+  --fn-duration-slow: 300ms;
+  --fn-duration-slower: 500ms;
+  --fn-ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --fn-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --fn-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --fn-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --fn-ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* ========== LAYOUT ========== */
+  --fn-header-height: 64px;
+}

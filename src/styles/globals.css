@@ -1,8 +1,10 @@
+@import '../tokens/design-tokens.css';
 @custom-variant dark (&:is(.dark *));
 
 /* ============================================
    DIGITAL JOURNAL DESIGN SYSTEM
    Theme: Premium printed media aesthetic
+   Tokens: imported from ../tokens/design-tokens.css
    ============================================ */
 
 :root {
