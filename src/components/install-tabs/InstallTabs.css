@@ -1,0 +1,181 @@
+/* ============================================
+   InstallTabs — F-050 / F-052 shared install widget
+   BEM prefix: fn-install-tabs__*
+   Tokens: design-tokens.css (--dj-*)
+   ============================================ */
+
+.fn-install-tabs {
+  font-family: var(--font-sans, Inter, sans-serif);
+  color: var(--dj-graphite, #4A4A4A);
+}
+
+.fn-install-tabs__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.fn-install-tabs__list--hero {
+  margin-bottom: 16px;
+  flex-direction: row;
+}
+
+@media (max-width: 640px) {
+  .fn-install-tabs__list--hero {
+    flex-direction: column;
+  }
+}
+
+.fn-install-tabs__list--compact {
+  margin-bottom: 12px;
+  flex-direction: row;
+}
+
+/* Tab buttons */
+.fn-install-tabs__tab {
+  appearance: none;
+  font-family: var(--font-sans, Inter, sans-serif);
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+  outline: none;
+}
+
+.fn-install-tabs__tab:focus-visible {
+  box-shadow: 0 0 0 2px var(--dj-deep-burgundy, #5D1F2D);
+}
+
+.fn-install-tabs__tab--hero {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.fn-install-tabs__tab--compact {
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+.fn-install-tabs__tab--idle {
+  background-color: var(--dj-pure-cream, #FFFFFF);
+  color: var(--dj-graphite, #4A4A4A);
+  border: 1px solid var(--dj-taupe-grey, #E5E5E0);
+}
+
+.fn-install-tabs__tab--idle:hover {
+  border-color: var(--dj-deep-burgundy, #5D1F2D);
+}
+
+.fn-install-tabs__tab--selected {
+  background-color: var(--dj-deep-burgundy, #5D1F2D);
+  color: #FFFFFF;
+  border: 1px solid var(--dj-deep-burgundy, #5D1F2D);
+}
+
+.fn-install-tabs__tab--disabled {
+  background-color: var(--dj-warm-alabaster, #FAF9F6);
+  color: rgba(74, 74, 74, 0.6);
+  border: 1px solid rgba(229, 229, 224, 0.6);
+  cursor: not-allowed;
+}
+
+.fn-install-tabs__tab-inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fn-install-tabs__tab-soon {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+}
+
+/* Panels */
+.fn-install-tabs__panel {
+  border-radius: 8px;
+}
+
+.fn-install-tabs__panel--hero {
+  padding: 24px;
+}
+
+.fn-install-tabs__panel--compact {
+  padding: 16px;
+}
+
+.fn-install-tabs__panel--active {
+  background-color: var(--dj-soft-charcoal, #1C1C1E);
+}
+
+.fn-install-tabs__panel--coming-soon {
+  background-color: var(--dj-warm-alabaster, #FAF9F6);
+  border: 1px solid var(--dj-taupe-grey, #E5E5E0);
+}
+
+.fn-install-tabs__panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.fn-install-tabs__panel-note {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.65);
+  font-family: var(--font-sans, Inter, sans-serif);
+}
+
+.fn-install-tabs__copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-sans, Inter, sans-serif);
+  transition: color 0.15s ease-in-out;
+}
+
+.fn-install-tabs__copy:hover {
+  color: #FFFFFF;
+}
+
+.fn-install-tabs__copy-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.fn-install-tabs__command {
+  display: block;
+  font-size: 16px;
+  color: #4ADE80;
+  font-family: var(--font-mono, 'JetBrains Mono', Consolas, monospace);
+  word-break: break-all;
+}
+
+.fn-install-tabs__soon-caption {
+  font-size: 15px;
+  font-family: var(--font-sans, Inter, sans-serif);
+  color: var(--dj-graphite, #4A4A4A);
+  margin: 0 0 8px;
+}
+
+.fn-install-tabs__soon-link {
+  color: var(--dj-deep-burgundy, #5D1F2D);
+  text-decoration: underline;
+}
+
+.fn-install-tabs__soon-link:hover {
+  color: var(--dj-burgundy-light, #7A3A4A);
+}
+
+.fn-install-tabs__soon-hint {
+  font-size: 13px;
+  font-family: var(--font-sans, Inter, sans-serif);
+  color: rgba(74, 74, 74, 0.7);
+  margin: 0;
+}
